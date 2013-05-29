@@ -27,7 +27,7 @@
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
 }
 .deck-container > .slide .deck-before, .deck-container > .slide .deck-previous {
-  opacity: 0.4;
+  opacity: 0;
 }
 .deck-container > .slide .deck-before:not(.deck-child-current) .deck-before, .deck-container > .slide .deck-before:not(.deck-child-current) .deck-previous, .deck-container > .slide .deck-previous:not(.deck-child-current) .deck-before, .deck-container > .slide .deck-previous:not(.deck-child-current) .deck-previous {
   opacity: 1;
@@ -54,6 +54,10 @@
 .deck-container .slide h2 {
   color: #0b7495;
   border-bottom: 0;
+}
+label.caption {
+  font-family:  "Ubuntu Condensed", serif;
+  font-size: 0.7em;
 }
 .cssreflections .deck-container .slide h2 {
   line-height: 1;
@@ -226,4 +230,70 @@
   -webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   -moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.rotate-45 {
+  transform:rotate(45deg) scaleY(1);
+  -ms-transform:rotate(45deg) scaleY(1); 
+  -webkit-transform:rotate(45deg) scaleY(1); 
+}
+
+.rotate-90 {
+    transform:rotate(90deg) scaleY(1);
+    -ms-transform:rotate(90deg) scaleY(1);
+    -webkit-transform:rotate(90deg) scaleY(1);
+}
+
+.rotate-n45 {
+    transform:rotate(-45deg) scaleY(1);
+    -ms-transform:rotate(-45deg) scaleY(1);
+    -webkit-transform:rotate(-45deg) scaleY(1);
+}
+
+.bubble {
+    float:right;
+    width: 175px;
+    height: 50px;
+    padding: 0px;
+    text-align: center;
+    background: #FFA41B;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.bubble:after {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: -9px;
+    border-style: solid;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #FFA41B;
+    display: block;
+    width: 0;
+    z-index: 1;
+}
+
+.bubble p {
+  -webkit-transform: translate(0, 50%);
+  -moz-transform: translate(0, 50%);
+  -ms-transform: translate(0, 50%);
+  -o-transform: translate(0, 50%);
+  transform: translate(0, 50%);
+  font-size: 0.6em;
+}
+
+.clone-arrow {
+  transform: scaleY(1.2) scaleX(3.5);
+  -ms-transform: scaleY(1.2) scaleX(3.5);
+  -webkit-transform: scaleY(1.2) scaleX(3.5);
+  color: darkred;
+}
+
+.fix-pos {
+    position: absolute;
+}
+
+.branch {
+    width: 80px; text-align: center;
 }

@@ -5,9 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=1024, user-scalable=no">
 
-	<title>Your deck.js Presentation</title>
-	
-	<link href='http://fonts.googleapis.com/css?family=Roboto:400,900,500' rel='stylesheet' type='text/css'>
+	<title>Git - Lesson Learned</title>
 
 	<link rel="stylesheet" href="themes/style/octicon.css">
 
@@ -26,7 +24,7 @@
 	<link rel="stylesheet" href="themes/style/dr.css">
 	
 	<!-- Transition theme. More available in /themes/transition/ or create your own. -->
-	<link rel="stylesheet" href="themes/transition/horizontal-slide.css">	
+	<link rel="stylesheet" href="themes/transition/fade.css">	
 
 	<!-- Required Modernizr file -->
 	<script src="modernizr.custom.js"></script>
@@ -37,28 +35,292 @@
 
 <section class="slide">
 	<h1>Git</h1>
-	<h3 class="vcenter" style="margin-top:70px;">Leason Learnt</h3>
-	<!--  -->
+	<h3 class="vcenter" style="margin-top:70px;">Lesson Learned</h3>
+</section>
+
+<section class="slide">
+    <h3 class="vcenter" style="margin-top:-50px;">Learned from</h3>
+    <h2 class="vcenter">IPM</h2>
+    <p class="vcenter" style="margin-top:50px;">Development</p>
 </section>
 
 <section class="slide">
 	<h3 class="vcenter" style="margin-top:-50px;">Regarding</h3>
-	<h2 class="vcenter">Workflow</h2>
-	<p class="vcenter" style="margin-top:50px;">w/ CVS</p>
+	<h2 class="vcenter">Repository Layout</h2>
 </section>
 
 <section class="slide">
-	<h3 class="vcenter" style="margin-top:-50px;">Learned from</h3>
-	<h2 class="vcenter">IPM</h2>
-	<p class="vcenter" style="margin-top:50px;">Development</p>
+    <h2 style="text-align:center;">Default Branches</h2>
+
+    <div class="git-ipm branch hcenter fix-pos">
+        <div><span class="octicon octicon-repo"></span></div>
+        <div><span class="octicon octicon-alignment-aligned-to rotate-45"></span></div>
+        <div><label class="caption" style="font-size: 0.65em">master</label></div>
+        <div><span class="octicon octicon-git-branch"></span></div>
+    </div>
+
+    <div class="hcenter fix-pos after-to" after-ref=".git-ipm" style="margin-top: 80px;">
+        <div class="slide bubble">
+            <p>Align with CVS mainline</p>
+        </div>
+    </div>
+
+    <div class="git-ipm-branch-dev branch hcenter fix-pos below-to" below-ref=".git-ipm" style="color: #0b7495;">
+        <div><span class="octicon octicon-alignment-aligned-to rotate-45"></span></div>
+        <div><label class="caption" style="font-size: 0.65em">dev</label></div>
+        <div><span class="octicon octicon-git-branch"></span></div>
+    </div>
+
+    <div class="hcenter fix-pos after-to below-to" below-ref=".git-ipm" after-ref=".git-ipm-branch-dev" style="margin-top: 50px;">
+        <div class="slide bubble">
+            <p>Project works</p>
+        </div>
+    </div>
+
+    <div class="git-ipm-branch-rtsai branch hcenter fix-pos below-to" below-ref=".git-ipm-branch-dev" style="color: darkgreen;">
+        <div><span class="octicon octicon-alignment-aligned-to rotate-45"></span></div>
+        <div><label class="caption" style="font-size: 0.65em">rtsai</label></div>
+        <div><span class="octicon octicon-git-branch"></span></div>
+    </div>
+
+    <div class="git-ipm-branch-kchen branch hcenter fix-pos below-to ahead-to" below-ref=".git-ipm-branch-dev" ahead-ref=".git-ipm-branch-rtsai" style="color: darkgreen;">
+        <div><span class="octicon octicon-alignment-aligned-to rotate-90" style="margin-right: -25px"></span></div>
+        <div><label class="caption" style="font-size: 0.65em">kchen</label></div>
+        <div><span class="octicon octicon-git-branch"></span></div>
+    </div>
+
+    <div class="git-ipm-branch-shhuang branch hcenter fix-pos below-to after-to" below-ref=".git-ipm-branch-dev" after-ref=".git-ipm-branch-rtsai" style="color: darkgreen;">
+        <div><span class="octicon octicon-alignment-aligned-to" style="margin-left: -25px"></span></div>
+        <div><label class="caption" style="font-size: 0.65em">shhuang</label></div>
+        <div><span class="octicon octicon-git-branch"></span></div>
+    </div>
+
+    <div class="hcenter fix-pos after-to below-to" below-ref=".git-ipm-branch-dev" after-ref=".git-ipm-branch-shhuang" style="margin-top: 50px;">
+        <div class="slide bubble">
+            <p>Individual works</p>
+        </div>
+    </div>
 </section>
 
 <section class="slide">
 	<h2 style="text-align:center;">IPM Workflow</h2>
 
-	<div class="slide">
-		<span class="octicon octicon-repo"></span>
+	<div class="cvs" style="width: 120px; text-align: center; padding: 0px; ">
+		<div><label class="caption">CVS</label></div>
+		<div><span class="octicon octicon-repo"></span></div>		
+		<div><span class="octicon octicon-alignment-aligned-to rotate-45"></span></div>		
+		<div><label class="caption" style="font-size: 0.65em">mainline</label></div>
+		<div style="margin-left: 5px;"><span class="octicon octicon-git-branch"></span></div>
 	</div>
+
+	<div class="team" style="width: 120px; text-align: center; padding: 0px;">
+		<div><label class="caption">Team</label></div>
+		<div><span class="octicon octicon-person-team"></span></div>
+	</div>
+
+	<div class="slide bubble team-speech">
+		<p>Clone</p>
+	</div>
+</section>
+
+<section class="slide">
+    <h2 style="text-align:center;">IPM Workflow</h2>
+
+    <div class="cvs" style="width: 120px; text-align: center; padding: 0px; ">
+        <div><label class="caption">CVS</label></div>
+        <div><span class="octicon octicon-repo"></span></div>
+        <div><span class="octicon octicon-alignment-aligned-to rotate-45"></span></div>
+        <div><label class="caption" style="font-size: 0.65em">mainline</label></div>
+        <div style="margin-left: 5px;"><span class="octicon octicon-git-branch"></span></div>
+    </div>
+
+    <div class="team" style="width: 120px; text-align: center; padding: 0px;">
+        <div><label class="caption">Team</label></div>
+        <div><span class="octicon octicon-person-team"></span></div>
+    </div>
+
+    <div class="vcenter clone-arrow-container">
+        <div><span class="octicon octicon-arrow-right clone-arrow"></span></div>
+    </div>
+
+    <div class="git-ipm" style="width: 220px; text-align: center;">
+        <div><label class="caption">IPM</label></div>
+        <div><span class="octicon octicon-repo"></span></div>
+        <div><span class="octicon octicon-alignment-aligned-to rotate-45"></span></div>
+        <div><label class="caption" style="font-size: 0.65em">master</label></div>
+        <div><span class="octicon octicon-git-branch"></span></div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2 style="text-align:center;">IPM Workflow</h2>
+
+    <div class="cvs" style="width: 120px; text-align: center; padding: 0px; ">
+        <div><label class="caption">CVS</label></div>
+        <div><span class="octicon octicon-repo"></span></div>
+        <div><span class="octicon octicon-alignment-aligned-to rotate-45"></span></div>
+        <div><label class="caption" style="font-size: 0.65em">mainline</label></div>
+        <div style="margin-left: 5px;"><span class="octicon octicon-git-branch"></span></div>
+    </div>
+
+    <div class="team" style="width: 120px; text-align: center; padding: 0px;">
+        <div><label class="caption">Team</label></div>
+        <div><span class="octicon octicon-person-team"></span></div>
+    </div>
+
+    <div class="bubble team-speech">
+        <p>Branch</p>
+    </div>
+
+    <div class="git-ipm" style="width: 220px; text-align: center;">
+        <div><label class="caption">IPM</label></div>
+        <div><span class="octicon octicon-repo"></span></div>
+        <div><span class="octicon octicon-alignment-aligned-to rotate-45"></span></div>
+        <div><label class="caption" style="font-size: 0.65em">master</label></div>
+        <div><span class="octicon octicon-git-branch"></span></div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2 style="text-align:center;">IPM Workflow</h2>
+
+    <div class="cvs" style="width: 120px; text-align: center; padding: 0px; ">
+        <div><label class="caption">CVS</label></div>
+        <div><span class="octicon octicon-repo"></span></div>
+        <div><span class="octicon octicon-alignment-aligned-to rotate-45"></span></div>
+        <div><label class="caption" style="font-size: 0.65em">mainline</label></div>
+        <div style="margin-left: 5px;"><span class="octicon octicon-git-branch"></span></div>
+    </div>
+
+    <div class="team" style="width: 120px; text-align: center; padding: 0px;">
+        <div><label class="caption">Team</label></div>
+        <div><span class="octicon octicon-person-team"></span></div>
+    </div>
+
+    <div class="slide bubble team-speech">
+        <p>Branch</p>
+    </div>
+
+    <div class="git-ipm" style="width: 220px; text-align: center;">
+        <div><label class="caption">IPM</label></div>
+        <div><span class="octicon octicon-repo"></span></div>
+        <div><span class="octicon octicon-alignment-aligned-to rotate-45"></span></div>
+        <div><label class="caption" style="font-size: 0.65em">master</label></div>
+        <div><span class="octicon octicon-git-branch"></span></div>
+    </div>
+
+    <div class="git-ipm-branch-dev" style="width: 120px; text-align: center; color: #0b7495">
+        <div><span class="octicon octicon-alignment-aligned-to rotate-45"></span></div>
+        <div><label class="caption" style="font-size: 0.65em">dev</label></div>
+        <div><span class="octicon octicon-git-branch"></span></div>
+    </div>
+
+</section>
+
+<section class="slide">
+    <h2 style="text-align:center;">IPM Workflow</h2>
+
+    <div class="cvs" style="width: 120px; text-align: center; padding: 0px; ">
+        <div><label class="caption">CVS</label></div>
+        <div><span class="octicon octicon-repo"></span></div>
+        <div><span class="octicon octicon-alignment-aligned-to rotate-45"></span></div>
+        <div><label class="caption" style="font-size: 0.65em">mainline</label></div>
+        <div style="margin-left: 5px;"><span class="octicon octicon-git-branch"></span></div>
+    </div>
+
+    <div class="team" style="width: 120px; text-align: center; padding: 0px;">
+        <div><label class="caption">Team</label></div>
+        <div><span class="octicon octicon-person-team"></span></div>
+    </div>
+
+    <div class="git-ipm" style="width: 220px; text-align: center;">
+        <div><label class="caption">IPM</label></div>
+        <div><span class="octicon octicon-repo"></span></div>
+        <div><span class="octicon octicon-alignment-aligned-to rotate-45"></span></div>
+        <div><label class="caption" style="font-size: 0.65em">master</label></div>
+        <div><span class="octicon octicon-git-branch"></span></div>
+    </div>
+
+    <div class="git-ipm-branch-dev" style="width: 120px; text-align: center; color: #0b7495">
+        <div><span class="octicon octicon-alignment-aligned-to rotate-45"></span></div>
+        <div><label class="caption" style="font-size: 0.65em">dev</label></div>
+        <div><span class="octicon octicon-git-branch"></span></div>
+    </div>
+
+    <div class="git-ipm-branch-kchen" style="width: 120px; text-align: center; color: darkgreen; font-size: 0.75em;">
+        <div><span class="octicon octicon-alignment-aligned-to rotate-90" style="margin-right: -25px"></span></div>
+        <div><label class="caption" style="font-size: 0.65em">kchen</label></div>
+        <div><span class="octicon octicon-git-branch"></span></div>
+    </div>
+
+    <div class="git-ipm-branch-rtsai" style="width: 120px; text-align: center; color: darkgreen; font-size: 0.75em;">
+        <div><span class="octicon octicon-alignment-aligned-to rotate-45"></span></div>
+        <div><label class="caption" style="font-size: 0.65em">rtsai</label></div>
+        <div><span class="octicon octicon-git-branch"></span></div>
+    </div>
+
+    <div class="git-ipm-branch-shhuang" style="width: 120px; text-align: center; color: darkgreen; font-size: 0.75em;">
+        <div><span class="octicon octicon-alignment-aligned-to" style="margin-left: -25px"></span></div>
+        <div><label class="caption" style="font-size: 0.65em">shhuang</label></div>
+        <div><span class="octicon octicon-git-branch"></span></div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2 style="text-align:center;">IPM Workflow</h2>
+
+    <div class="cvs" style="width: 120px; text-align: center; padding: 0px; ">
+        <div><label class="caption">CVS</label></div>
+        <div><span class="octicon octicon-repo"></span></div>
+        <div><span class="octicon octicon-alignment-aligned-to rotate-45"></span></div>
+        <div><label class="caption" style="font-size: 0.65em">mainline</label></div>
+        <div style="margin-left: 5px;"><span class="octicon octicon-git-branch"></span></div>
+    </div>
+
+    <div class="team" style="width: 120px; text-align: center; padding: 0px;">
+        <div><label class="caption">Team</label></div>
+        <div><span class="octicon octicon-person-team"></span></div>
+    </div>
+
+    <div class="git-ipm" style="width: 220px; text-align: center;">
+        <div><label class="caption">IPM</label></div>
+        <div><span class="octicon octicon-repo"></span></div>
+        <div><span class="octicon octicon-alignment-aligned-to rotate-45"></span></div>
+        <div><label class="caption" style="font-size: 0.65em">master</label></div>
+        <div><span class="octicon octicon-git-branch"></span></div>
+    </div>
+
+    <div class="git-ipm-branch-dev" style="width: 120px; text-align: center; color: #0b7495">
+        <div><span class="octicon octicon-alignment-aligned-to rotate-45"></span></div>
+        <div><label class="caption" style="font-size: 0.65em">dev</label></div>
+        <div><span class="octicon octicon-git-branch"></span></div>
+    </div>
+
+    <div class="git-ipm-branch-kchen" style="width: 120px; text-align: center; color: darkgreen; font-size: 0.75em;">
+        <div><span class="octicon octicon-alignment-aligned-to rotate-90" style="margin-right: -25px"></span></div>
+        <div><label class="caption" style="font-size: 0.65em">kchen</label></div>
+        <div><span class="octicon octicon-git-branch"></span></div>
+    </div>
+
+    <div class="git-ipm-branch-rtsai" style="width: 120px; text-align: center; color: darkgreen; font-size: 0.75em;">
+        <div><span class="octicon octicon-alignment-aligned-to rotate-45"></span></div>
+        <div><label class="caption" style="font-size: 0.65em">rtsai</label></div>
+        <div><span class="octicon octicon-git-branch"></span></div>
+    </div>
+
+    <div class="git-ipm-branch-shhuang" style="width: 120px; text-align: center; color: darkgreen; font-size: 0.75em;">
+        <div><span class="octicon octicon-alignment-aligned-to" style="margin-left: -25px"></span></div>
+        <div><label class="caption" style="font-size: 0.65em">shhuang</label></div>
+        <div><span class="octicon octicon-git-branch"></span></div>
+    </div>
+
+    <div class="bubble team-speech">
+        <p>Sync</p>
+    </div>
+
+    <div class="vcenter clone-arrow-container">
+        <div><span class="octicon octicon-arrow-right clone-arrow"></span></div>
+    </div>
 </section>
 
 <!-- End slides. -->
@@ -92,7 +354,8 @@
 
 
 <!-- Required JS files. -->
-<script src="jquery-1.7.2.min.js"></script>
+<script src="jquery-1.9.1.js"></script>
+<!-- <script src="jquery-ui-1.10.3.custom.min.js"></script> -->
 <script src="core/deck.core.js"></script>
 
 <!-- Extension JS files. Add or remove as needed. -->
@@ -108,7 +371,62 @@
 <script>
 	$(function() {
 		$.deck('.slide');
+
+        positioning();
+
+        $(window).bind("resize", positioning);
 	});
+
+    function positioning() {
+        var x = $(window).width() / 2;
+        var y = $(window).height() / 2;
+
+        $(".hcenter").each(function() {
+            $(this).css('left', (x - $(this).width() / 2) + 'px');
+        });
+        $(".below-to").each(function() {
+            var ref = $(this).attr("below-ref");
+            if (ref) {
+                var refObj = $(this).parent().find(ref);
+                $(this).css('top', (refObj.position().top + refObj.height() + 10) + 'px');
+            }
+        });
+        $(".ahead-to").each(function() {
+            var ref = $(this).attr("ahead-ref");
+            if (ref) {
+                var refObj = $(this).parent().find(ref);
+                $(this).css('left', (refObj.position().left - $(this).width() - 10) + 'px');
+            }
+        });
+        $(".after-to").each(function() {
+            var ref = $(this).attr("after-ref");
+            if (ref) {
+                var refObj = $(this).parent().find(ref);
+                $(this).css('left', (refObj.position().left + refObj.width() + 10) + 'px');
+            }
+        });
+
+//        var cvsPos = toPosition($('div.cvs').css('position', 'absolute').css('left', (x - 250) + 'px'));
+//        var teamPos = toPosition($('div.team').css('position', 'absolute').css('left', (x + 120) + 'px'));
+//        var gitIPMPos = toPosition($('div.git-ipm').css('position', 'absolute').css('left', (x + 70) + 'px').css("top", (cvsPos.bottom - 50) + "px"));
+//        var gitIPMDevPos = toPosition($('div.git-ipm-branch-dev').css('position', 'absolute').css('left', teamPos.left + 'px').css("top", (gitIPMPos.bottom + 10) + "px"));
+//        var gitIPMRTsaiPos = toPosition($('div.git-ipm-branch-rtsai').css('position', 'absolute').css('left', teamPos.left + 'px').css("top", (gitIPMDevPos.bottom + 25) + "px"));
+//
+//        $('div.team-speech').css('position', 'absolute').css('left', (teamPos.left + 100) + 'px').css("top", (teamPos.top + 25) + "px");
+//        $('div.clone-arrow-container').css('position', 'absolute').css('top', (cvsPos.bottom - 20) + 'px').css("marginLeft", "-30px");
+//        $('div.git-ipm-branch-kchen').css('position', 'absolute').css('left', (gitIPMRTsaiPos.left - 90) + 'px').css("top", (gitIPMDevPos.bottom + 25) + "px");
+//        $('div.git-ipm-branch-shhuang').css('position', 'absolute').css('left', (gitIPMRTsaiPos.left + 20) + 'px').css("top", (gitIPMDevPos.bottom + 25) + "px");
+    }
+
+    function toPosition(obj) {
+        return {'left': obj.position().left,
+                'top': obj.position().top,
+                'right': obj.position().left + obj.width(),
+                'bottom': obj.position().top + obj.height(),
+                'height': obj.height(),
+                'width': obj.width()};
+    }
+
 </script>
 </body>
 </html>
