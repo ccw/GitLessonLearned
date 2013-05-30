@@ -14,44 +14,32 @@ function positioning() {
         $(this).css('left', (x - $(this).width() / 2) + 'px');
     });
     $(".below-to").each(function() {
-        var ref = $(this).attr("below-ref");
+        var ref = getRefPos($(this), "below-ref");
         if (ref) {
-            var refObj = $(this).parent().find(ref);
-            $(this).css('top', (refObj.position().top + refObj.height() + 10) + 'px');
+            $(this).css('top', (ref.bottom + 10) + 'px');
         }
     });
     $(".ahead-to").each(function() {
-        var ref = $(this).attr("ahead-ref");
+        var ref = getRefPos($(this), "ahead-ref");
         if (ref) {
-            var refObj = $(this).parent().find(ref);
-            $(this).css('left', (refObj.position().left - $(this).width() - 10) + 'px');
+            $(this).css('left', (ref.left - $(this).width() - 10) + 'px');
         }
     });
     $(".after-to").each(function() {
-        var ref = $(this).attr("after-ref");
+        var ref = getRefPos($(this), "after-ref");
         if (ref) {
-            var refObj = $(this).parent().find(ref);
-            $(this).css('left', (refObj.position().left + refObj.width() + 10) + 'px');
+            $(this).css('left', (ref.right + 10) + 'px');
         }
     });
-
-//        var cvsPos = toPosition($('div.cvs').css('position', 'absolute').css('left', (x - 250) + 'px'));
-//        var teamPos = toPosition($('div.team').css('position', 'absolute').css('left', (x + 120) + 'px'));
-//        var gitIPMPos = toPosition($('div.git-ipm').css('position', 'absolute').css('left', (x + 70) + 'px').css("top", (cvsPos.bottom - 50) + "px"));
-//        var gitIPMDevPos = toPosition($('div.git-ipm-branch-dev').css('position', 'absolute').css('left', teamPos.left + 'px').css("top", (gitIPMPos.bottom + 10) + "px"));
-//        var gitIPMRTsaiPos = toPosition($('div.git-ipm-branch-rtsai').css('position', 'absolute').css('left', teamPos.left + 'px').css("top", (gitIPMDevPos.bottom + 25) + "px"));
-//
-//        $('div.team-speech').css('position', 'absolute').css('left', (teamPos.left + 100) + 'px').css("top", (teamPos.top + 25) + "px");
-//        $('div.clone-arrow-container').css('position', 'absolute').css('top', (cvsPos.bottom - 20) + 'px').css("marginLeft", "-30px");
-//        $('div.git-ipm-branch-kchen').css('position', 'absolute').css('left', (gitIPMRTsaiPos.left - 90) + 'px').css("top", (gitIPMDevPos.bottom + 25) + "px");
-//        $('div.git-ipm-branch-shhuang').css('position', 'absolute').css('left', (gitIPMRTsaiPos.left + 20) + 'px').css("top", (gitIPMDevPos.bottom + 25) + "px");
 }
 
-function toPosition(obj) {
-    return {'left': obj.position().left,
-            'top': obj.position().top,
-            'right': obj.position().left + obj.width(),
-            'bottom': obj.position().top + obj.height(),
-            'height': obj.height(),
-            'width': obj.width()};
+function getRefPos(obj, attrRef) {
+    var ref = obj.parent().find(obj.attr(attrRef)); 
+    if (!ref) return false;
+    return {'left': ref.position().left,
+            'top': ref.position().top,
+            'right': ref.position().left + ref.width(),
+            'bottom': ref.position().top + ref.height(),
+            'height': ref.height(),
+            'width': ref.width()};
 }

@@ -250,7 +250,6 @@ label.caption {
 }
 
 .bubble {
-    float:right;
     width: 175px;
     height: 50px;
     padding: 0px;
@@ -263,7 +262,8 @@ label.caption {
 
 .bubble:after {
     content: "";
-    position: absolute;
+    margin-left: -9px;
+    margin-top: -20px;
     top: 18px;
     left: -9px;
     border-style: solid;
@@ -280,13 +280,35 @@ label.caption {
   -ms-transform: translate(0, 50%);
   -o-transform: translate(0, 50%);
   transform: translate(0, 50%);
+  padding-top: 2px;
   font-size: 0.6em;
 }
 
-.clone-arrow {
+.arrow {
   transform: scaleY(1.2) scaleX(3.5);
   -ms-transform: scaleY(1.2) scaleX(3.5);
   -webkit-transform: scaleY(1.2) scaleX(3.5);
+  color: darkred;
+}
+
+.arrow-v {
+  transform: scaleX(1.2) scaleY(3.5);
+  -ms-transform: scaleX(1.2) scaleY(3.5);
+  -webkit-transform: scaleX(1.2) scaleY(3.5);
+  color: darkred;
+}
+
+.arrow-45 {
+  transform:rotate(45deg) scaleX(1.2) scaleY(3.5);
+  -ms-transform:rotate(45deg) scaleX(1.2) scaleY(3.5);
+  -webkit-transform:rotate(45deg) scaleX(1.2) scaleY(3.5);
+  color: darkred;
+}
+
+.arrow-n45 {
+  transform:rotate(-45deg) scaleX(1.2) scaleY(3.5);
+  -ms-transform:rotate(-45deg) scaleX(1.2) scaleY(3.5);
+  -webkit-transform:rotate(-45deg) scaleX(1.2) scaleY(3.5);
   color: darkred;
 }
 
@@ -296,4 +318,9 @@ label.caption {
 
 .branch {
     width: 80px; text-align: center;
+}
+
+.smalltalk {
+  font-size: 0.5em;
+  font-family:  "Ubuntu Condensed", serif;
 }
