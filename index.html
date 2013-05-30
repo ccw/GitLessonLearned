@@ -335,10 +335,107 @@
 </section>
 
 <section class="slide">
-	<h2 style="text-align:center;">git commit</h2>
-	<div class="hcenter fix-pos" style="text-align:center">
-    	<div><label class="caption">-a</label>&nbsp;<span>dddd</span></div>
+	<h2 style="text-align:center;">git add</h2>
+
+	<div class="a1 hcenter fix-pos arg">
+    	<h5>-p</h5>
+    	<label class="caption arg-desc">add by hunks</label>
 	</div>	
+
+	<div class="hcenter fix-pos after-to arg-cmt" after-ref=".a1">
+        <div class="slide bubble">
+            <p>Split changes in pieces</p>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+	<h2 style="text-align:center;">git commit</h2>
+
+	<div class="c1 hcenter fix-pos arg">
+    	<h5>-a</h5>
+    	<label class="caption arg-desc">stage changes and commit</label>
+	</div>	
+
+	<div class="hcenter fix-pos after-to arg-cmt" after-ref=".c1">
+        <div class="slide bubble">
+            <p>No time for staging</p>
+        </div>
+    </div>
+
+	<div class="c2 hcenter fix-pos below-to arg" below-ref=".c1">
+    	<h5>-p</h5>
+    	<label class="caption arg-desc">commit by hunks</label>
+	</div>	
+
+	<div class="hcenter fix-pos after-to below-to arg-cmt" below-ref=".c1" after-ref=".c2">
+        <div class="slide bubble">
+            <p>Split commit in pieces</p>
+        </div>
+    </div>
+
+	<div class="c3 hcenter fix-pos below-to arg" below-ref=".c2">
+    	<h5>--amend</h5>
+    	<label class="caption arg-desc">amend current tip</label>
+	</div>
+
+	<div class="hcenter fix-pos after-to below-to arg-cmt" below-ref=".c2" after-ref=".c3">
+        <div class="slide bubble">
+            <p>Redo latest commit with changes</p>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+	<h2 style="text-align:center;">git rm</h2>
+
+	<div class="r1 hcenter fix-pos arg">
+    	<h5>--cached</h5>
+    	<label class="caption arg-desc">unstage files</label>
+	</div>	
+
+	<div class="hcenter fix-pos after-to arg-cmt" after-ref=".r1">
+        <div class="slide bubble">
+            <p>Remove from index only</p>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+	<h2 style="text-align:center;">git reset</h2>
+
+	<div class="r1 hcenter fix-pos arg">
+    	<h5>-p</h5>
+    	<label class="caption arg-desc">unstage by hunks</label>
+	</div>	
+
+	<div class="hcenter fix-pos after-to arg-cmt" after-ref=".r1">
+        <div class="slide bubble">
+            <p>Split undo in pieces</p>
+        </div>
+    </div>
+
+	<div class="r2 hcenter fix-pos below-to arg" below-ref=".r1">
+    	<h5>--soft</h5>
+    	<label class="caption arg-desc">reset HEAD to given commit</label>
+	</div>	
+
+	<div class="hcenter fix-pos after-to below-to arg-cmt" below-ref=".r1" after-ref=".r2">
+        <div class="slide bubble">
+            <p>Affect no changed and staged files</p>
+        </div>
+    </div>
+
+	<div class="r3 hcenter fix-pos below-to arg" below-ref=".r2">
+    	<h5>--hard</h5>
+    	<label class="caption arg-desc">reset HEAD to given commit</label>
+	</div>
+
+	<div class="hcenter fix-pos after-to below-to arg-cmt" below-ref=".r2" after-ref=".r3">
+        <div class="slide bubble">
+            <p>Affect all changed and staged files</p>
+        </div>
+    </div>
 </section>
 
 <!-- End slides. -->

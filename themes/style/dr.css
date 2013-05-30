@@ -324,3 +324,22 @@ label.caption {
   font-size: 0.5em;
   font-family:  "Ubuntu Condensed", serif;
 }
+
+div.arg {
+  text-align:left;
+  width:600px;
+}
+
+label.arg-desc {
+  float:left;
+  margin-left:150px;
+  margin-top:-35px;
+}
+
+div.arg-cmt {
+  margin-left: -150px;
+}
+
+div.arg-cmt div.bubble {
+  width: 250px;
+}
