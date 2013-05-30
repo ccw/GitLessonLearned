@@ -1,4 +1,4 @@
-@font-face{font-family:'github-octicons';src:url(themes/fonts/github-octicons.eot);src:url(themes/fonts/github-octicons.eot#iefix) format("embedded-opentype"),url(themes/fonts/github-octicons.woff) format("woff"),url(themes/fonts/github-octicons.ttf) format("truetype");font-weight:normal;font-style:normal}
+@font-face{font-family:'github-octicons';src:url(../fonts/github-octicons.eot);src:url(../fonts/github-octicons.eot#iefix) format("embedded-opentype"),url(../fonts/github-octicons.svg) format("svg"),url(../fonts/github-octicons.woff) format("woff"),url(../fonts/github-octicons.ttf) format("truetype");font-weight:normal;font-style:normal}
 .octicon{font:normal normal 16px "github-octicons";line-height:1;display:inline-block;text-decoration:none;-webkit-font-smoothing:antialiased}
 .mega-octicon{font:normal normal 32px "github-octicons";line-height:1;display:inline-block;text-decoration:none;-webkit-font-smoothing:antialiased}
 .octicon-logo-github:before{content:'\f092'}
