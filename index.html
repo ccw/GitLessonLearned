@@ -335,16 +335,126 @@
 </section>
 
 <section class="slide">
+	<h2 style="text-align:center;">Stages</h2>
+
+	<div class="remote-repo branch hcenter fix-pos" style="color: darkred">
+		<div><label class="caption" style="font-size: 0.65em">remote</label></div>
+        <div><span class="octicon octicon-repo"></span></div>
+    </div>
+
+    <div class="remote-to-local branch hcenter fix-pos below-to" below-ref=".remote-repo">
+    	<div><span class="octicon octicon-alignment-align rotate-45"></span></div>
+    </div>
+
+    <div class="local-repo branch hcenter fix-pos below-to" below-ref=".remote-to-local" style="color: darkblue">
+		<div><label class="caption" style="font-size: 0.65em">local</label></div>
+        <div><span class="octicon octicon-repo"></span></div>
+    </div>
+
+    <div class="local-to-index branch hcenter fix-pos below-to" below-ref=".local-repo">
+    	<div><span class="octicon octicon-alignment-align rotate-45"></span></div>
+    </div>
+
+    <div class="local-index branch hcenter fix-pos below-to" below-ref=".local-to-index" style="color: darkgreen">
+		<div><label class="caption" style="font-size: 0.65em">index</label></div>
+        <div><span class="octicon octicon-database"></span></div>
+    </div>
+
+    <div class="index-to-working branch hcenter fix-pos below-to" below-ref=".local-index">
+    	<div><span class="octicon octicon-alignment-align rotate-45"></span></div>
+    </div>
+
+    <div class="local-working branch hcenter fix-pos below-to" below-ref=".index-to-working">
+		<div><label class="caption" style="font-size: 0.65em">working</label></div>
+        <div><span class="octicon octicon-diff"></span></div>
+    </div>
+
+    <div class="fix-pos after-to below-to" after-ref=".index-to-working" below-ref=".local-index" style="margin-top:-10px;">
+    	<div class="slide bubble">
+            <p>git add</p>
+        </div>    	
+    </div>
+
+    <div class="fix-pos after-to below-to" after-ref=".local-to-index" below-ref=".local-repo" style="margin-top:-10px;">
+    	<div class="slide bubble">
+            <p>git commit</p>
+        </div>    	
+    </div>
+
+    <div class="fix-pos after-to below-to" after-ref=".remote-to-local" below-ref=".remote-repo" style="margin-top:-10px;">
+    	<div class="slide bubble">
+            <p>git push</p>
+        </div>    	
+    </div>
+</section>
+
+<!--
+<section class="slide">
+	<h2 style="text-align:center;">Stages</h2>
+
+	<div class="remote-repo branch hcenter fix-pos" style="color: darkred">
+		<div><label class="caption" style="font-size: 0.65em">remote</label></div>
+        <div><span class="octicon octicon-repo"></span></div>
+    </div>
+
+    <div class="remote-to-local branch hcenter fix-pos below-to" below-ref=".remote-repo">
+    	<div><span class="octicon octicon-alignment-aligned-to rotate-45"></span></div>
+    </div>
+
+    <div class="local-repo branch hcenter fix-pos below-to" below-ref=".remote-to-local" style="color: darkblue">
+		<div><label class="caption" style="font-size: 0.65em">local</label></div>
+        <div><span class="octicon octicon-repo"></span></div>
+    </div>
+
+    <div class="local-to-index branch hcenter fix-pos below-to" below-ref=".local-repo">
+    	<div><span class="octicon octicon-alignment-aligned-to rotate-45"></span></div>
+    </div>
+
+    <div class="local-index branch hcenter fix-pos below-to" below-ref=".local-to-index" style="color: darkgreen">
+		<div><label class="caption" style="font-size: 0.65em">index</label></div>
+        <div><span class="octicon octicon-database"></span></div>
+    </div>
+
+    <div class="index-to-working branch hcenter fix-pos below-to" below-ref=".local-index">
+    	<div><span class="octicon octicon-alignment-aligned-to rotate-45"></span></div>
+    </div>
+
+    <div class="local-working branch hcenter fix-pos below-to" below-ref=".index-to-working">
+		<div><label class="caption" style="font-size: 0.65em">working</label></div>
+        <div><span class="octicon octicon-diff"></span></div>
+    </div>        
+
+    <div class="fix-pos after-to below-to" after-ref=".remote-to-local" below-ref=".remote-repo" style="margin-top:-10px;">
+    	<div class="slide bubble">
+            <p>git fetch</p>
+        </div>    	
+    </div>
+
+    <div class="fix-pos after-to below-to" after-ref=".local-to-index" below-ref=".local-repo" style="margin-top:-10px;">
+    	<div class="slide bubble">
+            <p>git commit</p>
+        </div>    	
+    </div>
+
+    <div class="fix-pos after-to below-to" after-ref=".index-to-working" below-ref=".local-index" style="margin-top:-10px;">
+    	<div class="slide bubble">
+            <p>git add</p>
+        </div>    	
+    </div>
+</section>
+-->
+
+<section class="slide">
 	<h2 style="text-align:center;">git add</h2>
 
 	<div class="a1 hcenter fix-pos arg">
     	<h5>-p</h5>
-    	<label class="caption arg-desc">add by hunks</label>
+    	<label class="caption arg-desc">by hunks</label>
 	</div>	
 
 	<div class="hcenter fix-pos after-to arg-cmt" after-ref=".a1">
         <div class="slide bubble">
-            <p>Split changes in pieces</p>
+            <p>Split change in pieces</p>
         </div>
     </div>
 </section>
@@ -365,7 +475,7 @@
 
 	<div class="c2 hcenter fix-pos below-to arg" below-ref=".c1">
     	<h5>-p</h5>
-    	<label class="caption arg-desc">commit by hunks</label>
+    	<label class="caption arg-desc">by hunks</label>
 	</div>	
 
 	<div class="hcenter fix-pos after-to below-to arg-cmt" below-ref=".c1" after-ref=".c2">
