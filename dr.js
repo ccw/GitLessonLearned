@@ -6,6 +6,13 @@ $(function() {
     $(window).bind("resize", positioning);
 });
 
+var positionTypes = [
+    {name: 'above', positioning: function(obj, ref, offset) { obj.css('top', (ref.top - obj.height() - offset) + 'px') } },
+    {name: 'below', positioning: function(obj, ref, offset) { obj.css('top', (ref.bottom + offset) + 'px') } },
+    {name: 'ahead', positioning: function(obj, ref, offset) { obj.css('left', (ref.left - obj.width() - offset) + 'px') } },
+    {name: 'after', positioning: function(obj, ref, offset) { obj.css('left', (ref.right + offset) + 'px') } }
+];
+
 function positioning() {
     var x = $(window).width() / 2;
     var y = $(window).height() / 2;
@@ -13,27 +20,28 @@ function positioning() {
     $(".hcenter").each(function() {
         $(this).css('left', (x - $(this).width() / 2) + 'px');
     });
-    $(".below-to").each(function() {
-        var ref = getRefPos($(this), "below-ref");
+
+    for (var i = 0; i < positionTypes.length; i++) {
+        positioningForType(positionTypes[i]);
+    }
+}
+
+function positioningForType(type) {
+    $('.' + type.name + '-to').each(function() {
+        var obj = $(this);        
+        var ref = getRef(obj, type.name + '-ref');
         if (ref) {
-            $(this).css('top', (ref.bottom + 10) + 'px');
-        }
-    });
-    $(".ahead-to").each(function() {
-        var ref = getRefPos($(this), "ahead-ref");
-        if (ref) {
-            $(this).css('left', (ref.left - $(this).width() - 10) + 'px');
-        }
-    });
-    $(".after-to").each(function() {
-        var ref = getRefPos($(this), "after-ref");
-        if (ref) {
-            $(this).css('left', (ref.right + 10) + 'px');
+            type.positioning(obj, ref, getOffset(obj, type));
         }
     });
 }
 
-function getRefPos(obj, attrRef) {
+function getOffset(obj, type) {
+    var attr = type.name + '-offset';
+    return obj.attr(attr) ? parseInt(obj.attr(attr)) : obj.attr('data-offset') ? parseInt(obj.attr('data-offset')) : 10;
+}
+
+function getRef(obj, attrRef) {
     var ref = obj.parent().find(obj.attr(attrRef)); 
     if (!ref) return false;
     return {'left': ref.position().left,
