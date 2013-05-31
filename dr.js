@@ -7,6 +7,8 @@ $(function() {
 });
 
 var positionTypes = [
+    {name: 'halign', positioning: function(obj, ref, offset) { obj.css('left', ref.left + 'px') } },
+    {name: 'valign', positioning: function(obj, ref, offset) { obj.css('top', ref.top + 'px') } },
     {name: 'above', positioning: function(obj, ref, offset) { obj.css('top', (ref.top - obj.height() - offset) + 'px') } },
     {name: 'below', positioning: function(obj, ref, offset) { obj.css('top', (ref.bottom + offset) + 'px') } },
     {name: 'ahead', positioning: function(obj, ref, offset) { obj.css('left', (ref.left - obj.width() - offset) + 'px') } },

@@ -345,11 +345,11 @@ div.arg-cmt div.bubble {
 }
 
 div.commit, div.commit-revert {
-    width: 80px; height: 40px; text-align: center; vertical-align: top; color: #666;
+    width: 60px; height: 40px; text-align: center; vertical-align: top; color: #666;
 }
 
 div.commit label, div.commit-revert label {
-    font-size: 0.75em;
+    font-size: 0.65em;
 }
 
 div.commit div.icon, div.commit-revert div.icon {
@@ -361,11 +361,13 @@ div.commit div.label, div.commit div.icon, div.commit-revert div.label, div.comm
 }
 
 div.commit div.label {
-  float: right; margin-top:-4px;
+  float: right; margin-top:-4px; 
+  /*margin-right: 15px;*/
 }
 
 div.commit-revert div.label {
-  float: left; margin-top:-10px; vertical-align: top; margin-left:25px;
+  float: left; margin-top:-10px; vertical-align: top; 
+  /*margin-left:25px;*/
 }
 
 div.commit-revert div.icon {
