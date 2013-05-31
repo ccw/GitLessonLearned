@@ -365,7 +365,7 @@ div.commit div.label {
 }
 
 div.commit-revert div.label {
-  float: left; margin-top:-10px; vertical-align: top; margin-left:15px;
+  float: left; margin-top:-10px; vertical-align: top; margin-left:25px;
 }
 
 div.commit-revert div.icon {
