@@ -72,7 +72,6 @@ label.caption {
   background: #fff;
   position: relative;
   z-index: auto;
-  /* http://nicolasgallagher.com/css-drop-shadows-without-images/ */
 }
 .borderradius .deck-container .slide pre {
   -webkit-border-radius: 5px;

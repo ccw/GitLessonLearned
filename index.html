@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="extensions/scale/deck.scale.css">
 
     <!-- Style theme. More available in /themes/style/ or create your own. -->
-    <link rel="stylesheet" href="themes/style/dr.css">
+    <link rel="stylesheet" href="css/dr.css">
     
     <!-- Transition theme. More available in /themes/transition/ or create your own. -->
     <link rel="stylesheet" href="themes/transition/fade.css">    
@@ -366,7 +366,7 @@
 </section>
 
 <section class="slide">
-    <h2 style="text-align:center;">Apply Changes</h2>
+    <h2 style="text-align:center;">Applying Changes</h2>
 
     <div class="remote-repo branch hcenter fix-pos" style="color: darkred">
         <div><label class="caption" style="font-size: 0.65em">remote</label></div>
@@ -478,7 +478,7 @@
 </section>
 
 <section class="slide">
-    <h2 style="text-align:center;">Undo Changes</h2>
+    <h2 style="text-align:center;">Undoing Changes</h2>
 
     <div class="remote-repo branch hcenter fix-pos" style="color: darkred">
         <div><label class="caption" style="font-size: 0.65em">remote</label></div>
@@ -568,7 +568,7 @@
 </section>
 
 <section class="slide">
-    <h2 style="text-align:center;">Change References</h2>
+    <h2 style="text-align:center;">Changing References</h2>
 
     <div class="c1 commit hcenter fix-pos">
         <div class="label"><label class="caption">c01</label></div>
@@ -638,7 +638,7 @@
     <div class="branch-idv branch hcenter fix-pos below-to after-to" below-ref=".c13" after-ref=".c7" after-offset="15" data-offset="5" style="width:60px;height:55px;color: #0b7495;">
         <div><span class="octicon octicon-alignment-align rotate-45"></span></div>
         <div style="height:30px;"><span class="octicon octicon-git-branch"></span></div>
-        <div style="height:25px;"><label class="caption" style="font-size: 0.65em">feature</label></div>
+        <div style="height:25px;"><label class="caption" style="font-size: 0.65em">poc</label></div>
     </div>
 
     <div class="branch-dev branch hcenter fix-pos below-to after-to" below-ref=".c11" after-ref=".c6" after-offset="5" data-offset="0" style="width:60px;height:55px;color: #0b7495;">
@@ -670,7 +670,6 @@
                 <p>git checkout dev</p>
             </div>      
         </div>
-    </div>
     </div>
 
     <div class="head-dev branch hcenter fix-pos below-to after-to" below-ref=".branch-dev" after-ref=".c6" after-offset="5" data-offset="50" style="width:60px;height:55px;">
@@ -708,14 +707,63 @@
                 <div style="height:30px;"><span class="octicon octicon-hubot" style="color: darkred;"></span></div>
                 <div style="height:25px;"><label class="caption" style="font-size: 0.65em;color: darkred;">HEAD</label></div>
             </div>
+            <div class="slide bubble" style="float:left; margin-left:80px; margin-top:-60px; width:250px;">
+                <p>git branch -f poc pac-13.00</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide" style="width:100%;height:100%;position: absolute;top:0; left: 0;">
+        <div class="head-dev branch hcenter fix-pos below-to after-to" below-ref=".c2" after-ref=".tag" after-offset="-15" data-offset="0" style="width:60px;height:55px; color: #0b7495;">
+            <div style="float:left;">
+                <div><span class="octicon octicon-alignment-align rotate-n45"></span></div>
+            </div>
+            <div style="float:right;margin-left:30px;margin-top:-40px;">
+                <div style="height:30px;"><span class="octicon octicon-git-branch"></span></div>
+                <div style="height:25px;"><label class="caption" style="font-size: 0.65em">poc</label></div>
+            </div>
+        </div>
+        <div class="branch-idv branch hcenter fix-pos below-to after-to" below-ref=".c13" after-ref=".c7" after-offset="15" data-offset="5" style="width:60px;height:55px;color: lightgray;">
+            <div><span class="octicon octicon-alignment-align rotate-45"></span></div>
+            <div style="height:30px;"><span class="octicon octicon-git-branch"></span></div>
+            <div style="height:25px;"><label class="caption" style="font-size: 0.65em">poc</label></div>
         </div>
     </div>
 </section>
 
 <section class="slide">
-    <h3 class="vcenter" style="margin-top:-50px;">fin</h3>
+    <h2 style="text-align:center;">git checkout</h2>
+
+    <div class="r1 hcenter fix-pos arg">
+        <h5>-b</h5>
+        <label class="caption arg-desc">create a new branch and refer to it</label>
+    </div>
+</section>
+
+<section class="slide">
+    <h2 style="text-align:center;">git branch</h2>
+
+    <div class="b1 hcenter fix-pos arg">
+        <h5>-f</h5>
+        <label class="caption arg-desc">force branch referring certain point</label>
+    </div>
+
+    <div class="b2 hcenter fix-pos below-to arg" below-ref=".b1">
+        <h5>-avv</h5>
+        <label class="caption arg-desc">show all branches with its last commit and upstream reference</label>
+    </div>
+</section>
+
+<section class="slide">
+    <h3 class="vcenter" style="margin-top:-50px;">Fin</h3>
     <p class="vcenter" style="margin-left:-245px;margin-top:15px;font-size:0.7em">and</p>
     <h2 class="vcenter">Thanks</h2>
+</section>
+
+<section class="slide">
+    <h3 class="vcenter" style="margin-top:-50px;">References</h3>
+    <p class="vcenter" style="margin-left:-295px;margin-top:15px;font-size:0.7em">and</p>
+    <h2 class="vcenter">Appendix</h2>
 </section>
 
 <section class="slide">
@@ -739,6 +787,11 @@
     <div class="r4 reference hcenter fix-pos below-to" below-ref=".r3" data-offset="20">
         <h5>Learning Git Branching</h5>
         <a href="http://bit.ly/Y0W8jl"><label class="caption">http://bit.ly/Y0W8jl</label></a>
+    </div>
+
+    <div class="r5 reference hcenter fix-pos below-to" below-ref=".r4" data-offset="20">
+        <h5>Git Reference</h5>
+        <a href="http://bit.ly/9cA8bB"><label class="caption">http://bit.ly/9cA8bB</label></a>
     </div>
 </section>
 
