@@ -347,11 +347,11 @@ div.commit, div.commit-revert {
     width: 60px; height: 40px; text-align: center; vertical-align: top; color: #666;
 }
 
-div.commit label, div.commit-revert label {
+div.commit label, div.commit-revert label, div.commit-wider label {
     font-size: 0.65em;
 }
 
-div.commit div.icon, div.commit-revert div.icon {
+div.commit div.icon, div.commit-revert div.icon, div.commit-wider div.icon {
     font-size: 1.2em;
 }
 
@@ -359,7 +359,7 @@ div.commit div.label, div.commit div.icon, div.commit-revert div.label, div.comm
     height: 35px;
 }
 
-div.commit div.label {
+div.commit div.label, div.commit-wider div.label {
   float: right; margin-top:-4px; 
   /*margin-right: 15px;*/
 }
@@ -375,4 +375,15 @@ div.commit-revert div.icon {
 
 div.reference {
   text-align: left; width: 700px; line-height: 0.8; text-align:left;
+}
+
+div.commit-wider {
+    width: 150px; height: 40px; text-align: left; vertical-align: top; color: #666;
+}
+
+div.commit-wider div.icon {
+    float: left;
+}
+div.commit-wider div.label {
+    float: left; margin-left:5px; vertical-align: top;
 }

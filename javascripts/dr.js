@@ -76,6 +76,7 @@ function findWithinSameSection(obj, refName) {
 }
 
 function decoratesWithPosition(ref) {
+    if (!ref || !ref.position()) return ref;
     return {'left': ref.position().left,
             'top': ref.position().top,
             'right': ref.position().left + ref.width(),
