@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=1024, user-scalable=no">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=1024, user-scalable=no">
 
-	<title>Git - Lesson Learned</title>
+    <title>Git - Lesson Learned</title>
 
-	<link rel="stylesheet" href="themes/style/octicon.css">
+    <link rel="stylesheet" href="themes/style/octicon.css">
 
-	<!-- Required stylesheet -->
-	<link rel="stylesheet" href="core/deck.core.css">
-	
-	<!-- Extension CSS files go here. Remove or add as needed. -->
-	<link rel="stylesheet" href="extensions/goto/deck.goto.css">
-	<link rel="stylesheet" href="extensions/menu/deck.menu.css">
-	<link rel="stylesheet" href="extensions/navigation/deck.navigation.css">
-	<link rel="stylesheet" href="extensions/status/deck.status.css">
-	<link rel="stylesheet" href="extensions/hash/deck.hash.css">
-	<link rel="stylesheet" href="extensions/scale/deck.scale.css">
+    <!-- Required stylesheet -->
+    <link rel="stylesheet" href="core/deck.core.css">
+    
+    <!-- Extension CSS files go here. Remove or add as needed. -->
+    <link rel="stylesheet" href="extensions/goto/deck.goto.css">
+    <link rel="stylesheet" href="extensions/menu/deck.menu.css">
+    <link rel="stylesheet" href="extensions/navigation/deck.navigation.css">
+    <link rel="stylesheet" href="extensions/status/deck.status.css">
+    <link rel="stylesheet" href="extensions/hash/deck.hash.css">
+    <link rel="stylesheet" href="extensions/scale/deck.scale.css">
 
-	<!-- Style theme. More available in /themes/style/ or create your own. -->
-	<link rel="stylesheet" href="themes/style/dr.css">
-	
-	<!-- Transition theme. More available in /themes/transition/ or create your own. -->
-	<link rel="stylesheet" href="themes/transition/fade.css">	
+    <!-- Style theme. More available in /themes/style/ or create your own. -->
+    <link rel="stylesheet" href="themes/style/dr.css">
+    
+    <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+    <link rel="stylesheet" href="themes/transition/fade.css">    
 
-	<!-- Required Modernizr file -->
-	<script src="modernizr.custom.js"></script>
+    <!-- Required Modernizr file -->
+    <script src="javascripts/modernizr.custom.js"></script>
 </head>
 <body class="deck-container">
 
 <!-- Begin slides. Just make elements with a class of slide. -->
 
 <section class="slide">
-	<h1>Git</h1>
-	<h3 class="vcenter" style="margin-top:70px;">Lesson Learned</h3>
+    <h1>Git</h1>
+    <h3 class="vcenter" style="margin-top:70px;">Lesson Learned</h3>
 </section>
 
 <section class="slide">
@@ -45,9 +45,9 @@
 </section>
 
 <section class="slide">
-	<h3 class="vcenter" style="margin-top:-50px;">Usage</h3>
-	<p class="vcenter" style="margin-left:-285px;margin-top:15px;font-size:0.7em">of</p>
-	<h2 class="vcenter">Branches</h2>
+    <h3 class="vcenter" style="margin-top:-50px;">Usage</h3>
+    <p class="vcenter" style="margin-left:-285px;margin-top:15px;font-size:0.7em">of</p>
+    <h2 class="vcenter">Branches</h2>
 </section>
 
 <section class="slide">
@@ -62,7 +62,7 @@
 
     <div class="hcenter fix-pos after-to" after-ref=".git-ipm" style="margin-top: 80px;">
         <div class="slide bubble">
-            <p>Align with CVS mainline</p>
+            <p>Aligns with CVS mainline</p>
         </div>
     </div>
 
@@ -75,6 +75,12 @@
     <div class="hcenter fix-pos after-to below-to" below-ref=".git-ipm" after-ref=".git-ipm-branch-dev" style="margin-top: 50px;">
         <div class="slide bubble">
             <p>Project works</p>
+        </div>
+    </div>
+
+    <div class="hcenter fix-pos after-to below-to" below-ref=".git-ipm" after-ref=".git-ipm-branch-dev" style="margin-top: 50px;">
+        <div class="slide bubble">
+            <p>And shall be testable always</p>
         </div>
     </div>
 
@@ -103,25 +109,25 @@
     </div>
 
     <div class="git-ipm-branch-others hcenter fix-pos below-to after-to" below-ref=".git-ipm" after-ref=".git-ipm-branch-dev" style="width: 280px;">
-    	<div class="slide">
+        <div class="slide">
             <div class="branch" style="color: darkred;">
-            	<div><span class="octicon octicon-alignment-aligned-to" style="margin-left: -25px"></span></div>
-            	<div><label class="caption" style="font-size: 0.65em">defect_8848</label></div>
-            	<div><span class="octicon octicon-git-branch"></span></div>
+                <div><span class="octicon octicon-alignment-aligned-to" style="margin-left: -25px"></span></div>
+                <div><label class="caption" style="font-size: 0.65em">defect_8848</label></div>
+                <div><span class="octicon octicon-git-branch"></span></div>
             </div>
             <div style="float:right;margin-top:-75px">
-            	<div class="bubble">
-            		<p>Others, by purpose</p>
-            	</div>
+                <div class="bubble">
+                    <p>Others, by purpose</p>
+                </div>
             </div>            
         </div>            
     </div>
 </section>
 
 <section class="slide">
-	<h3 class="vcenter" style="margin-top:-50px;">Co-living</h3>
-	<p class="vcenter" style="margin-left:-160px;margin-top:15px;font-size:0.7em">with</p>
-	<h2 class="vcenter">CVS</h2>
+    <h3 class="vcenter" style="margin-top:-50px;">Co-living</h3>
+    <p class="vcenter" style="margin-left:-160px;margin-top:15px;font-size:0.7em">with</p>
+    <h2 class="vcenter">CVS</h2>
 </section>
 
 <section class="slide">
@@ -140,12 +146,12 @@
     </div>
 
     <div class="fix-pos ahead-to" ahead-ref=".git-ipm" style="width:90px;">
-    	<div class="slide">            
+        <div class="slide">            
             <div style="margin-top:10px;margin-left:10px;text-align:center;width:90px;">
-            	<div style="line-height:0.5;"><label class="caption" style="font-size: 0.65em;color:darkred;">Update</label></div>
+                <div style="line-height:0.5;"><label class="caption" style="font-size: 0.65em;color:darkred;">Update</label></div>
                 <div style="margin-left: 5px;"><span class="octicon octicon-arrow-right arrow"></span></div>
-    		</div>
-    	</div>    	
+            </div>
+        </div>        
     </div>
 
     <div class="git-ipm-branch-dev branch hcenter fix-pos below-to" below-ref=".git-ipm" style="color: #0b7495;">
@@ -158,7 +164,7 @@
         <div class="slide" style="text-align:center;width:70px;height:100px;">
             <div style="line-height:2;vertical-align:top;"><label class="caption" style="font-size: 0.65em;color:darkred;">Merge</label></div>
             <div style="margin-left: 5px;"><span class="octicon octicon-arrow-down arrow-v"></span></div>
-    	</div>
+        </div>
     </div>
 
     <div class="git-ipm-branch-rtsai branch hcenter fix-pos below-to" below-ref=".git-ipm-branch-dev" style="color: darkgreen;">
@@ -181,12 +187,27 @@
 
     <div class="hcenter fix-pos ahead-to below-to" below-ref=".git-ipm" ahead-ref=".git-ipm-branch-rtsai">
         <div class="slide" style="text-align:center;width:70px;height:100px;">
-        	<div>
-        		<div style="line-height:2;vertical-align:top;"><label class="caption" style="font-size: 0.65em;color:darkred;">Merge</label></div>
-            	<div style="margin-left: 5px;"><span class="octicon octicon-arrow-down arrow-45"></span></div>
-        	</div>
-    	</div>
-    </div>    
+            <div>
+                <div style="line-height:2;vertical-align:top;"><label class="caption" style="font-size: 0.65em;color:darkred;">Merge</label></div>
+                <div style="margin-left: 5px;"><span class="octicon octicon-arrow-down arrow-45"></span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="git-ipm-branch-others hcenter fix-pos below-to after-to" below-ref=".git-ipm" after-ref=".git-ipm-branch-dev" style="width: 280px;">
+        <div class="slide">
+            <div class="branch" style="color: darkblue;">
+                <div><span class="octicon octicon-alignment-aligned-to" style="margin-left: -25px"></span></div>
+                <div><label class="caption" style="font-size: 0.65em">br-pac-13.00</label></div>
+                <div><span class="octicon octicon-tag"></span></div>
+            </div>
+            <div style="float:right;margin-top:-75px">
+                <div class="bubble">
+                    <p>Tag @ branch cut</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section class="slide">
@@ -214,7 +235,13 @@
         <div class="slide" style="text-align:center;width:70px;height:100px;">
             <div style="line-height:2;vertical-align:top;"><label class="caption" style="font-size: 0.65em;color:darkred;">Merge</label></div>
             <div style="margin-left: 5px;"><span class="octicon octicon-arrow-up arrow-45"></span></div>
-    	</div>
+        </div>
+    </div>
+
+    <div class="hcenter fix-pos after-to below-to" below-ref=".git-ipm" after-ref=".git-ipm-branch-dev" style="margin-top: 50px;">
+        <div class="slide bubble" style="width:250px;">
+            <p>Already the consolidations</p>
+        </div>
     </div>
 
     <div class="git-ipm-branch-rtsai branch hcenter fix-pos below-to" below-ref=".git-ipm-branch-dev" style="color: darkgreen;">
@@ -237,95 +264,95 @@
 
     <div class="hcenter fix-pos ahead-to below-to" below-ref=".git-ipm" ahead-ref=".git-ipm-branch-rtsai" style="margin-top: -80px;">
         <div class="slide" style="text-align:center;width:70px;height:100px;">
-        	<div>
-        		<div style="line-height:2;vertical-align:top;"><label class="caption" style="font-size: 0.65em;color:darkred;">Commit</label></div>
-            	<div style="margin-left: 5px;"><span class="octicon octicon-arrow-up arrow-n45"></span></div>
-        	</div>
-    	</div>
+            <div>
+                <div style="line-height:2;vertical-align:top;"><label class="caption" style="font-size: 0.65em;color:darkred;">Commit</label></div>
+                <div style="margin-left: 5px;"><span class="octicon octicon-arrow-up arrow-n45"></span></div>
+            </div>
+        </div>
     </div>
 
     <div class="fix-pos ahead-to" ahead-ref=".git-ipm" style="width:90px;">
-    	<div class="slide">            
+        <div class="slide">            
             <div style="margin-top:10px;margin-left:10px;text-align:center;width:90px;">
-            	<div style="line-height:0.5;"><label class="caption" style="font-size: 0.65em;color:darkred;">Update</label></div>
+                <div style="line-height:0.5;"><label class="caption" style="font-size: 0.65em;color:darkred;">Update</label></div>
                 <div style="margin-left: 5px;"><span class="octicon octicon-arrow-right arrow"></span></div>
-    		</div>
-    	</div>    	
+            </div>
+        </div>        
     </div>
 
 </section>
 
 <section class="slide">
-	<h3 class="vcenter" style="margin-top:-50px;">Usage</h3>
-	<p class="vcenter" style="margin-left:-185px;margin-top:15px;font-size:0.7em">of</p>
-	<h2 class="vcenter">Tools</h2>
+    <h3 class="vcenter" style="margin-top:-50px;">Usage</h3>
+    <p class="vcenter" style="margin-left:-185px;margin-top:15px;font-size:0.7em">of</p>
+    <h2 class="vcenter">Tools</h2>
 </section>
 
 <section class="slide">
-	<h2 style="text-align:center;">Git Shell</h2>
+    <h2 style="text-align:center;">Git Shell</h2>
 
-	<div class="shell hcenter fix-pos">
-		<img src="images/Terminal.png"/>
-	</div>
-</section>	
+    <div class="shell hcenter fix-pos">
+        <img src="images/Terminal.png"/>
+    </div>
+</section>    
 
 <section class="slide">
-	<h2 style="text-align:center;">GUI Clients</h2>
+    <h2 style="text-align:center;">GUI Clients</h2>
 
-	<div class="hcenter fix-pos">
-	    <div><label class="caption">Git Extensions</label></div>
+    <div class="hcenter fix-pos" style="text-align: center;">
+        <div><label class="caption">Git Extensions</label></div>
         <a href="https://code.google.com/p/gitextensions/"><img src="images/GitExtensions.png" width="550px"/></a>
-	</div>
+    </div>
 </section>  
 
 <section class="slide">
     <h2 style="text-align:center;">GUI Clients</h2>
 
-    <div class="hcenter fix-pos">
-		<div><label class="caption">SourceTree</label></div>
-		<a href="http://www.sourcetreeapp.com/"><img src="images/SourceTree.png" width="550px"/></a>
-	</div>
+    <div class="hcenter fix-pos" style="text-align: center;">
+        <div><label class="caption">SourceTree</label></div>
+        <a href="http://www.sourcetreeapp.com/"><img src="images/SourceTree.png" width="550px"/></a>
+    </div>
 </section>  
 
 <section class="slide">
     <h2 style="text-align:center;">GUI Clients</h2>
 
-	<div class="hcenter fix-pos">
-		<div><label class="caption">GitEye</label></div>
-		<a href="http://www.collab.net/giteyeapp"><img src="http://www.collab.net/sites/all/themes/collabnet/_media/giteye/graphical-goodness.png" width="550px"/></a>
-	</div>
+    <div class="hcenter fix-pos" style="text-align: center;">
+        <div><label class="caption">GitEye</label></div>
+        <a href="http://www.collab.net/giteyeapp"><img src="http://www.collab.net/sites/all/themes/collabnet/_media/giteye/graphical-goodness.png" width="550px"/></a>
+    </div>
 </section>  
 
 <section class="slide">
     <h2 style="text-align:center;">GUI Clients</h2>
 
-	<div class="hcenter fix-pos">
-	    <div><label class="caption">TortoiseGit</label></div>
-	    <a href="https://code.google.com/p/tortoisegit/"><img src="http://tortoisegit.googlecode.com/git/doc/images/en/GitSync.png" width="550px"/></a>
-	</div>
-	
-</section>	
+    <div class="hcenter fix-pos" style="text-align: center;">
+        <div><label class="caption">TortoiseGit</label></div>
+        <a href="https://code.google.com/p/tortoisegit/"><img src="http://tortoisegit.googlecode.com/git/doc/images/en/GitSync.png" width="550px"/></a>
+    </div>
+    
+</section>    
 
 <section class="slide">
-	<h2 style="text-align:center;">Both Useful</h2>
+    <h2 style="text-align:center;">Both Useful</h2>
 
-	<div class="shell hcenter fix-pos hcenter" style="text-align:center; width:250px; height:250px;">
-		<div><label class="caption">Shell</label></div>
-		<div style="position: absolute; width:250px; height:250px;top:10px;">
-			<img src="images/Terminal.png" width="250px" height="250px"/>
-		</div>
-	</div>
-	<div class="fix-pos after-to hcenter" after-ref=".shell" style="width:200px;margin-top:120px;">
+    <div class="shell hcenter fix-pos hcenter" style="text-align:center; width:250px; height:250px;">
+        <div><label class="caption">Shell</label></div>
+        <div style="position: absolute; width:250px; height:250px;top:10px;">
+            <img src="images/Terminal.png" width="250px" height="250px"/>
+        </div>
+    </div>
+    <div class="fix-pos after-to hcenter" after-ref=".shell" style="width:200px;margin-top:120px;">
         <div class="slide bubble">
             <p>Good at actions</p>
         </div>
     </div>
 
     <div class="gui hcenter fix-pos below-to" below-ref=".shell" style="text-align:center">
-    	<div><label class="caption">GUIs</label></div>
-		<img src="images/SourceTree.png" width="250px"/>
-	</div>
-	<div class="fix-pos after-to below-to hcenter" below-ref=".shell" after-ref=".gui" style="width:200px;margin-top:100px;">
+        <div><label class="caption">GUIs</label></div>
+        <img src="images/SourceTree.png" width="250px"/>
+    </div>
+    <div class="fix-pos after-to below-to hcenter" below-ref=".shell" after-ref=".gui" style="width:200px;margin-top:100px;">
         <div class="slide bubble">
             <p>Good at viewing</p>
         </div>
@@ -333,62 +360,62 @@
 </section>
 
 <section class="slide">
-	<h3 class="vcenter" style="margin-top:-50px;">Command</h3>
-	<!-- <p class="vcenter" style="margin-left:-195px;margin-top:15px;font-size:0.7em">of</p> -->
-	<h2 class="vcenter">Cases</h2>
+    <h3 class="vcenter" style="margin-top:-50px;">Usages</h3>
+     <p class="vcenter" style="margin-left:-355px;margin-top:15px;font-size:0.7em">of</p>
+    <h2 class="vcenter">Commands</h2>
 </section>
 
 <section class="slide">
-	<h2 style="text-align:center;">Apply Changes</h2>
+    <h2 style="text-align:center;">Apply Changes</h2>
 
-	<div class="remote-repo branch hcenter fix-pos" style="color: darkred">
-		<div><label class="caption" style="font-size: 0.65em">remote</label></div>
+    <div class="remote-repo branch hcenter fix-pos" style="color: darkred">
+        <div><label class="caption" style="font-size: 0.65em">remote</label></div>
         <div><span class="octicon octicon-repo"></span></div>
     </div>
 
     <div class="remote-to-local branch hcenter fix-pos below-to" below-ref=".remote-repo">
-    	<div><span class="octicon octicon-alignment-align rotate-45"></span></div>
+        <div><span class="octicon octicon-alignment-align rotate-45"></span></div>
     </div>
 
     <div class="local-repo branch hcenter fix-pos below-to" below-ref=".remote-to-local" style="color: darkblue">
-		<div><label class="caption" style="font-size: 0.65em">local</label></div>
+        <div><label class="caption" style="font-size: 0.65em">local</label></div>
         <div><span class="octicon octicon-repo"></span></div>
     </div>
 
     <div class="local-to-index branch hcenter fix-pos below-to" below-ref=".local-repo">
-    	<div><span class="octicon octicon-alignment-align rotate-45"></span></div>
+        <div><span class="octicon octicon-alignment-align rotate-45"></span></div>
     </div>
 
     <div class="local-index branch hcenter fix-pos below-to" below-ref=".local-to-index" style="color: darkgreen">
-		<div><label class="caption" style="font-size: 0.65em">staging</label></div>
+        <div><label class="caption" style="font-size: 0.65em">staging</label></div>
         <div><span class="octicon octicon-database"></span></div>
     </div>
 
     <div class="index-to-working branch hcenter fix-pos below-to" below-ref=".local-index">
-    	<div><span class="octicon octicon-alignment-align rotate-45"></span></div>
+        <div><span class="octicon octicon-alignment-align rotate-45"></span></div>
     </div>
 
     <div class="local-working branch hcenter fix-pos below-to" below-ref=".index-to-working">
-		<div><label class="caption" style="font-size: 0.65em">working</label></div>
+        <div><label class="caption" style="font-size: 0.65em">working</label></div>
         <div><span class="octicon octicon-file-directory"></span></div>
     </div>
 
     <div class="fix-pos after-to below-to" after-ref=".index-to-working" below-ref=".local-index" style="margin-top:-10px;">
-    	<div class="slide bubble">
+        <div class="slide bubble">
             <p>git add</p>
-        </div>    	
+        </div>        
     </div>
 
     <div class="fix-pos after-to below-to" after-ref=".local-to-index" below-ref=".local-repo" style="margin-top:-10px;">
-    	<div class="slide bubble">
+        <div class="slide bubble">
             <p>git commit</p>
-        </div>    	
+        </div>        
     </div>
 
     <div class="fix-pos after-to below-to" after-ref=".remote-to-local" below-ref=".remote-repo" style="margin-top:-10px;">
-    	<div class="slide bubble">
+        <div class="slide bubble">
             <p>git push</p>
-        </div>    	
+        </div>        
     </div>
 </section>
 
@@ -406,7 +433,7 @@
 
     <div class="r1 hcenter fix-pos arg">
         <h5>--cached</h5>
-        <label class="caption arg-desc">keep file and stage the deletion</label>
+        <label class="caption arg-desc">stage the deletion but remain the files in disk</label>
     </div>
 </section>
 
@@ -425,7 +452,7 @@
 
     <div class="c3 hcenter fix-pos below-to arg" below-ref=".c2">
         <h5>--amend</h5>
-        <label class="caption arg-desc">Redo latest commit with staged changes</label>
+        <label class="caption arg-desc">redo latest commit with staged changes</label>
     </div>
 </section>
 
@@ -434,7 +461,7 @@
 
     <div class="p1 hcenter fix-pos arg">
         <h5>-u</h5>
-        <label class="caption arg-desc">push to remote and create upstream reference if not exist</label>
+        <label class="caption arg-desc">push to remote and create upstream reference if nonexistent</label>
     </div>
 
     <div class="p2 hcenter fix-pos arg below-to" below-ref=".p1">
@@ -536,7 +563,7 @@
 
     <div class="r4 hcenter fix-pos below-to arg" below-ref=".r3">
         <h5>--hard</h5>
-        <label class="caption arg-desc">reset to unchanged</label>
+        <label class="caption arg-desc">reset as unchanged</label>
     </div>
 </section>
 
@@ -681,9 +708,6 @@
                 <div style="height:30px;"><span class="octicon octicon-hubot" style="color: darkred;"></span></div>
                 <div style="height:25px;"><label class="caption" style="font-size: 0.65em;color: darkred;">HEAD</label></div>
             </div>
-            <div class="slide bubble" style="float:left; margin-left:80px; margin-top:-60px;">
-                <p>git checkout c01</p>
-            </div>
         </div>
     </div>
 </section>
@@ -702,7 +726,7 @@
         <a href="http://bit.ly/13pSHVC"><label class="caption">http://bit.ly/13pSHVC</label></a>
     </div>  
 
-    <div class="r2 reference hcenter fix-pos below-to" below-ref=".r1" data-offset="20"=>
+    <div class="r2 reference hcenter fix-pos below-to" below-ref=".r1" data-offset="20">
         <h5>git-flow cheatsheet</h5>
         <a href="http://bit.ly/10SEQmg"><label class="caption">http://bit.ly/10SEQmg</label></a>
     </div>
@@ -729,17 +753,17 @@
 
 <!-- deck.status snippet -->
 <p class="deck-status">
-	<span class="deck-status-current"></span>
-	/
-	<span class="deck-status-total"></span>
+    <span class="deck-status-current"></span>
+    /
+    <span class="deck-status-total"></span>
 </p>
 
 <!-- deck.goto snippet -->
 <form action="." method="get" class="goto-form">
-	<label for="goto-slide">Go to slide:</label>
-	<input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
-	<datalist id="goto-datalist"></datalist>
-	<input type="submit" value="Go">
+    <label for="goto-slide">Go to slide:</label>
+    <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+    <datalist id="goto-datalist"></datalist>
+    <input type="submit" value="Go">
 </form>
 
 <!-- deck.hash snippet -->
@@ -748,7 +772,7 @@
 
 
 <!-- Required JS files. -->
-<script src="jquery-1.9.1.js"></script>
+<script src="javascripts/jquery-1.9.1.js"></script>
 <!-- <script src="jquery-ui-1.10.3.custom.min.js"></script> -->
 <script src="core/deck.core.js"></script>
 
@@ -761,7 +785,7 @@
 <script src="extensions/navigation/deck.navigation.js"></script>
 <script src="extensions/scale/deck.scale.js"></script>
 
-<script src="dr.js"></script>
+<script src="javascripts/dr.js"></script>
 
 </body>
 </html>
