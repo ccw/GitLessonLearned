@@ -1,8 +1,10 @@
 .deck-container .goto-form {
-  position: absolute;
+  font-family: 'Ubuntu Condensed';
+  font-size: 0.35em;
+  position: fixed;
   z-index: 3;
   bottom: 10px;
-  left: 50%;
+  right: 55px;
   height: 1.75em;
   margin: 0 0 0 -9.125em;
   line-height: 1.75em;

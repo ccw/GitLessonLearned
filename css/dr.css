@@ -45,7 +45,11 @@
   font-family: "Pacifico", serif;
   font-weight: 600;
 }
-.deck-container .slide h2, .deck-container .slide h4, .deck-container .slide h5, .deck-container .slide h6 {
+.deck-container .slide h5 {
+  font-family: "Ubuntu Condensed", serif;
+  font-weight: 500;
+}
+.deck-container .slide h2, .deck-container .slide h4, .deck-container .slide h6 {
   font-family: "Roboto", "Hoefler Text", Constantia, Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
 }
 .deck-container .slide h1 {
@@ -386,4 +390,8 @@ div.commit-wider div.icon {
 }
 div.commit-wider div.label {
     float: left; margin-left:5px; vertical-align: top;
+}
+
+p.deck-status:hover {
+  cursor: pointer;
 }

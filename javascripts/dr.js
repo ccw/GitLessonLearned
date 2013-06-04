@@ -5,6 +5,14 @@ $(function() {
     eventing();
 
     $(window).bind("resize", positioning);
+
+    $('p.deck-status').on('click', function() {
+        if ($('.goto-form').css('display') === 'none') {
+            $.deck('showGoTo');
+        } else {
+            $.deck('hideGoTo');
+        }
+    });
 });
 
 var positionTypes = [
