@@ -410,3 +410,13 @@ div.commit-wider div.label {
 p.deck-status:hover {
   cursor: pointer;
 }
+
+p.giant {
+  transform: scaleX(0.7) scaleY(3.3);
+  -ms-transform: scaleX(0.7) scaleY(3.3);
+  -webkit-transform: scaleX(0.7) scaleY(3.3);
+}
+
+p.subtitle {
+  text-align:center;font-size:0.8em;
+}
