@@ -397,7 +397,7 @@ div.reference {
 }
 
 div.commit-wider {
-    width: 150px; height: 40px; text-align: left; vertical-align: top; color: #666;
+    width: 150px; height: 40px; text-align: left; vertical-align: top; color: #666; margin-left:49px;
 }
 
 div.commit-wider div.icon {
@@ -419,4 +419,24 @@ p.giant {
 
 p.subtitle {
   text-align:center;font-size:0.8em;
+}
+
+div.toolbox {
+  text-align:left; width:500px;height:100px;
+}
+
+div.toolbox img {
+  float:left; width:100px;
+}
+
+div.toolbox div.toolhead {
+  text-decoration: none;
+  float:left;
+  margin-left: 10px;
+  maring-top: 10px;
+  line-height: 0.8;
+}
+
+div.toolbox div.toolhead a:hover {
+  text-decoration: none;
 }

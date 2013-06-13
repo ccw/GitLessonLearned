@@ -12,6 +12,7 @@
   display: none;
   background: #ccc;
   overflow: hidden;
+  width:25em;
 }
 .borderradius .deck-container .goto-form {
   -webkit-border-radius: 10px;
@@ -31,7 +32,7 @@
 }
 
 #goto-slide {
-  width: 8.375em;
+  width: 18.5em;
   margin: 0 0.625em;
   height: 1.4375em;
 }
