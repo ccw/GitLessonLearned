@@ -516,25 +516,29 @@
 </section>
 
 <section class="slide" id="content_cmds_2_apply">
-    <h2 class="git-add" style="text-align:center;">git add</h2>
+    <h2 style="text-align:center;">Applying Changes</h2>
 
-    <div class="a1 hcenter fix-pos arg below-to" below-ref=".git-add" below-offset="35">
+    <h4 class="git-add hcenter fix-pos arg below-to" below-ref=".subject" below-offset="80" style="text-align:center;">git add</h2>
+
+    <div class="a1 hcenter fix-pos arg below-to" below-ref=".git-add" below-offset="20">
         <h5>-p</h5>
         <label class="caption arg-desc">patch mode; add changes to staging by hunks</label>
     </div>  
 
-    <h2 class="git-rm" style="text-align:center;">git rm</h2>
+    <h4 class="git-rm hcenter fix-pos arg below-to" below-ref=".a1" below-offset="30" style="text-align:center;">git rm</h2>
 
-    <div class="r1 hcenter fix-pos arg below-to" below-ref=".git-rm" below-offset="35">
+    <div class="r1 hcenter fix-pos arg below-to" below-ref=".git-rm" below-offset="20">
         <h5>--cached</h5>
         <label class="caption arg-desc">stage the deletion but remain the files in disk</label>
     </div>
 </section>
 
 <section class="slide" id="content_cmds_3_apply">
-    <h2 class="git-commit" style="text-align:center;">git commit</h2>
+    <h2 style="text-align:center;">Applying Changes</h2>
 
-    <div class="c1 hcenter fix-pos arg below-to" below-ref=".git-commit" below-offset="35">
+    <h4 class="git-cm hcenter fix-pos arg below-to" below-ref=".subject" below-offset="80" style="text-align:center;">git commit</h2>
+
+    <div class="c1 hcenter fix-pos arg below-to" below-ref=".git-cm" below-offset="20">
         <h5>-a</h5>
         <label class="caption arg-desc">bypass staging; commit changes directly</label>
     </div>  
@@ -549,9 +553,9 @@
         <label class="caption arg-desc">redo latest commit with staged changes</label>
     </div>
 
-    <h2 class="git-push fix-pos hcenter below-to" below-ref=".c3" style="text-align:center;">git push</h2>
+    <h4 class="git-push fix-pos hcenter below-to" below-ref=".c3" below-offset="30" style="text-align:center;">git push</h2>
 
-    <div class="p1 hcenter fix-pos arg below-to" below-ref=".git-push" below-offset="35">
+    <div class="p1 hcenter fix-pos arg below-to" below-ref=".git-push" below-offset="20">
         <h5>-u</h5>
         <label class="caption arg-desc">push to remote and create upstream reference if nonexistent</label>
     </div>
@@ -629,15 +633,17 @@
 
     <div class="fix-pos ahead-to below-to" ahead-ref=".local-working" below-ref=".index-to-working" style="margin-top:10px;">
         <div class="slide bubble-r">
-            <p>git checkout -- file</p>
+            <p>git checkout -- PATHs</p>
         </div>      
     </div>    
 </section>
 
 <section class="slide" id="content_cmds_7_undo">
-    <h2 class="git-reset" style="text-align:center;">git reset</h2>
+    <h2 style="text-align:center;">Undoing Changes</h2>
 
-    <div class="r1 hcenter fix-pos arg below-to" below-ref=".git-reset" below-offset="35">
+    <h4 class="git-reset hcenter fix-pos arg below-to" below-ref=".subject" below-offset="80" style="text-align:center;">git reset</h2>
+
+    <div class="r1 hcenter fix-pos arg below-to" below-ref=".git-reset" below-offset="20">
         <h5>-p</h5>
         <label class="caption arg-desc">patch mode; reset changes by hunks</label>
     </div>
@@ -657,9 +663,9 @@
         <label class="caption arg-desc">reset as unchanged</label>
     </div>
 
-    <h2 class="git-co hcenter fix-pos below-to" below-ref=".r4" style="text-align:center;">git checkout</h2>
+    <h4 class="git-co hcenter fix-pos arg below-to" below-ref=".r4" below-offset="30" style="text-align:center;">git checkout</h2>
 
-    <div class="r1 hcenter fix-pos arg below-to" below-ref=".git-co" below-offset="35">
+    <div class="r1 hcenter fix-pos arg below-to" below-ref=".git-co" below-offset="20">
         <h5>-- [PATHs]</h5>
         <label class="caption arg-desc">update PATHs with local indexed version</label>
     </div>
@@ -830,16 +836,18 @@
 </section>
 
 <section class="slide" id="content_cmds_9_refs">
-    <h2 class="git-co" style="text-align:center;">git checkout</h2>
+    <h2 style="text-align:center;">Changing References</h2>
 
-    <div class="r1 hcenter fix-pos arg below-to" below-ref=".git-co" below-offset="35">
+    <h4 class="git-co hcenter fix-pos arg below-to" below-ref=".subject" below-offset="80" style="text-align:center;">git checkout</h2>
+
+    <div class="r1 hcenter fix-pos arg below-to" below-ref=".git-co" below-offset="20">
         <h5>-b</h5>
         <label class="caption arg-desc">create a new branch and refer to it</label>
     </div>
 
-    <h2 class="git-br" style="text-align:center;">git branch</h2>
+    <h4 class="git-br hcenter fix-pos arg below-to" below-ref=".r1" below-offset="30" style="text-align:center;">git branch</h2>
 
-    <div class="b1 hcenter fix-pos arg below-to" below-ref=".git-br" below-offset="35">
+    <div class="b1 hcenter fix-pos arg below-to" below-ref=".git-br" below-offset="20">
         <h5>-f</h5>
         <label class="caption arg-desc">force branch referring certain point</label>
     </div>
@@ -1074,27 +1082,29 @@
 </section>
 
 <section class="slide" id="content_cmds_14_branching">
-    <h2 class="git-merge" style="text-align:center;">git merge</h2>
+    <h2 class="subject" style="text-align:center;">Managing Branches</h2>
 
-    <div class="b1 hcenter fix-pos arg below-to" below-ref=".git-merge" below-offset="35">
+    <h4 class="git-merge hcenter fix-pos arg below-to" below-ref=".subject" below-offset="80" style="text-align:center;">git merge</h2>
+
+    <div class="b1 hcenter fix-pos arg below-to" below-ref=".git-merge" below-offset="20">
         <h5>use case</h5>
         <label class="caption arg-desc">consolidating major/public branches</label>
     </div>
 
-    <div class="hcenter fix-pos below-to" below-ref=".git-merge" below-offset="28" style="margin-left: 300px;">
+    <div class="hcenter fix-pos below-to" below-ref=".git-merge" below-offset="13" style="margin-left: 300px;">
         <div class="slide bubble">
             <p>Rollback will be easier</p>
         </div>
     </div>
 
-    <h2 class="git-rebase" style="text-align:center;">git rebase</h2>
+    <h4 class="git-rebase hcenter fix-pos arg below-to" below-ref=".b1" below-offset="80" style="text-align:center;">git rebase</h2>
 
-    <div class="b1 hcenter fix-pos arg below-to" below-ref=".git-rebase" below-offset="35">
+    <div class="b1 hcenter fix-pos arg below-to" below-ref=".git-rebase" below-offset="20">
         <h5>use case</h5>
         <label class="caption arg-desc">consolidating minor/private branches</label>
     </div>
 
-    <div class="hcenter fix-pos below-to" below-ref=".git-rebase" below-offset="28" style="margin-left: 300px;">
+    <div class="hcenter fix-pos below-to" below-ref=".git-rebase" below-offset="0" style="margin-left: 300px;">
         <div class="slide bubble" style="height:100px;">
             <p>Not recommended<br/>in some workflows</p>
         </div>
@@ -1373,18 +1383,43 @@
 </section>
 
 <section class="slide" id="content_cmds_20_committing">
-    <h2 class="git-cp" style="text-align:center;">git cherry-pick</h2>
+    <h2 class="subject" style="text-align:center;">Managing Commits</h2>
 
-    <div class="b1 hcenter fix-pos arg below-to" below-ref=".git-cp" below-offset="35">
+    <h4 class="git-cp hcenter fix-pos arg below-to" below-ref=".subject" below-offset="80" style="text-align:center;">git cherry-pick</h2>
+
+    <div class="c1 hcenter fix-pos arg below-to" below-ref=".git-cp" below-offset="20">
         <h5>use case</h5>
         <label class="caption arg-desc">redo changes on different branches</label>
     </div>
 
-    <h2 class="git-rebase" style="text-align:center;">git rebase -i</h2>
+    <h4 class="git-rebase hcenter fix-pos arg below-to" below-ref=".c1" below-offset="35"  style="text-align:center;">git rebase -i</h2>
 
-    <div class="b1 hcenter fix-pos arg below-to" below-ref=".git-rebase" below-offset="35">
+    <div class="r1 hcenter fix-pos arg below-to" below-ref=".git-rebase" below-offset="20">
         <h5>use case</h5>
         <label class="caption arg-desc">refine commits on the same branches</label>
+    </div>
+</section>
+
+<section class="slide" id="content_cmds_21_logging">
+    <h2 class="subject" style="text-align:center;">Viewing Logs</h2>
+
+    <h4 class="git-rlg hcenter fix-pos arg below-to" below-ref=".subject" below-offset="80" style="text-align:center;">git reflog</h4>
+
+    <div class="r1 hcenter fix-pos arg below-to" below-ref=".git-rlg" below-offset="20">
+        <h5>show [REF]</h5>
+        <label class="caption arg-desc">show the log of the reference</label>
+    </div>
+
+    <h4 class="git-lg hcenter fix-pos arg below-to" below-ref=".r1" below-offset="35"  style="text-align:center;">git log</h2>
+
+    <div class="l1 hcenter fix-pos arg below-to" below-ref=".git-lg" below-offset="20">
+        <h5>--graph</h5>
+        <label class="caption arg-desc">draw graphical commit history</label>
+    </div>
+
+    <div class="l2 hcenter fix-pos arg below-to" below-ref=".l1" below-offset="20">
+        <h5>--pretty</h5>
+        <label class="caption arg-desc">prettify the log output</label>
     </div>
 </section>
 
@@ -1438,8 +1473,8 @@
     </div>
 </section>
 
-<section class="slide" id="content_ref_links">
-    <h2 style="text-align:center;">References</h2>
+<section class="slide" id="content_ref_tutorials">
+    <h2 style="text-align:center;">Tutorials</h2>
 
     <div class="r1 reference hcenter fix-pos" style="line-height: 0.8; text-align:left;">
         <h5>Git Tutorials and Training | Atlassian</h5>
@@ -1465,13 +1500,43 @@
         <h5>Git Reference</h5>
         <a href="http://bit.ly/9cA8bB"><label class="caption">http://bit.ly/9cA8bB</label></a>
     </div>
+
+    <div class="r6 reference hcenter fix-pos below-to" below-ref=".r5" data-offset="20">
+        <h5>Git from the bottom up</h5>
+        <a href="http://bit.ly/YiEOa"><label class="caption">http://bit.ly/YiEOa</label></a>
+    </div>
 </section>
+
+<section class="slide" id="content_ref_tips">
+    <h2 style="text-align:center;">Tips</h2>
+
+    <div class="r1 reference hcenter fix-pos" style="line-height: 0.8; text-align:left;">
+        <h5>Git Completion</h5>
+        <a href="http://bit.ly/hE8Mg0"><label class="caption">http://bit.ly/hE8Mg0</label></a>
+    </div>  
+
+    <div class="r2 reference hcenter fix-pos below-to" below-ref=".r1" data-offset="20">
+        <h5>Branch in Prompt</h5>
+        <a href="http://bit.ly/12KwEun"><label class="caption">http://bit.ly/12KwEun</label></a>
+    </div>
+
+    <div class="r3 reference hcenter fix-pos below-to" below-ref=".r2" data-offset="20">
+        <h5>Git Magic</h5>
+        <a href="http://stanford.io/RG1HR"><label class="caption">http://stanford.io/RG1HR</label></a>
+    </div>
+
+    <div class="r4 reference hcenter fix-pos below-to" below-ref=".r3" data-offset="20">
+        <h5>.gitconfig</h5>
+        <a href="http://bit.ly/1bCHuAH"><label class="caption">http://bit.ly/1bCHuAH</label></a>
+    </div>
+</section>    
 
 <section class="slide" id="fin">
     <h3 class="vcenter" style="margin-top:-50px;">Fin</h3>
     <p class="vcenter" style="margin-left:-245px;margin-top:15px;font-size:0.7em">and</p>
     <h2 class="vcenter">Thanks</h2>
 </section>
+
 
 <!-- End slides. -->
 

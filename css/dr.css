@@ -59,6 +59,11 @@
   color: #0b7495;
   border-bottom: 0;
 }
+.deck-container .slide h4 {
+  color: #826A99;
+  border-bottom: 0;
+  font-size:1.5em;
+}
 label.caption {
   font-family:  "Ubuntu Condensed", serif;
   font-size: 0.7em;
@@ -76,6 +81,9 @@ label.caption {
   background: #fff;
   position: relative;
   z-index: auto;
+
+  font-family:  "Roboto", serif;
+  font-size:0.75em;
 }
 .borderradius .deck-container .slide pre {
   -webkit-border-radius: 5px;
