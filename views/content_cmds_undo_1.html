@@ -1,0 +1,63 @@
+<h2 style="text-align:center;">Undoing Changes</h2>
+
+    <div class="remote-repo branch hcenter fix-pos" style="color: darkred">
+        <div><label class="caption" style="font-size: 0.65em">remote</label></div>
+        <div><span class="octicon octicon-repo"></span></div>
+    </div>
+
+    <div class="remote-to-local branch hcenter fix-pos below-to" below-ref=".remote-repo">
+        <div><span class="octicon octicon-alignment-aligned-to rotate-45"></span></div>
+    </div>
+
+    <div class="local-repo branch hcenter fix-pos below-to" below-ref=".remote-to-local" style="color: darkblue">
+        <div><label class="caption" style="font-size: 0.65em">local</label></div>
+        <div><span class="octicon octicon-repo"></span></div>
+    </div>
+
+    <div class="local-to-index branch hcenter fix-pos below-to" below-ref=".local-repo">
+        <div><span class="octicon octicon-alignment-aligned-to rotate-45"></span></div>
+    </div>
+
+    <div class="local-index branch hcenter fix-pos below-to" below-ref=".local-to-index" style="color: darkgreen">
+        <div><label class="caption" style="font-size: 0.65em">staging</label></div>
+        <div><span class="octicon octicon-database"></span></div>
+    </div>
+
+    <div class="index-to-working branch hcenter fix-pos below-to" below-ref=".local-index">
+        <div><span class="octicon octicon-alignment-aligned-to rotate-45"></span></div>
+    </div>
+
+    <div class="local-working branch hcenter fix-pos below-to" below-ref=".index-to-working">
+        <div><label class="caption" style="font-size: 0.65em">working</label></div>
+        <div><span class="octicon octicon-file-directory"></span></div>
+    </div>
+
+    <div class="fix-pos after-to below-to" after-ref=".remote-to-local" below-ref=".remote-repo" style="margin-top:-10px;">
+        <div class="slide bubble">
+            <p>git revert</p>
+        </div>      
+    </div>
+
+    <div class="fix-pos after-to below-to" after-ref=".local-to-index" below-ref=".local-repo" style="margin-top:-10px;">
+        <div class="slide bubble">
+            <p>git reset --soft HEAD^</p>
+        </div>      
+    </div>    
+
+    <div class="fix-pos after-to below-to" after-ref=".index-to-working" below-ref=".local-index" style="margin-top:-10px;">
+        <div class="slide bubble">
+            <p>git reset</p>
+        </div>      
+    </div>
+
+    <div class="fix-pos after-to below-to" after-ref=".local-working" below-ref=".index-to-working" style="margin-top:10px;">
+        <div class="slide bubble">
+            <p>git reset --hard</p>
+        </div>      
+    </div>
+
+    <div class="fix-pos ahead-to below-to" ahead-ref=".local-working" below-ref=".index-to-working" style="margin-top:10px;">
+        <div class="slide bubble-r">
+            <p>git checkout -- PATHs</p>
+        </div>      
+    </div>

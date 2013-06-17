@@ -1,0 +1,62 @@
+<h2 class="subject" style="text-align:center;">Managing Commits</h2>
+    <p class="subtitle fix-pos hcenter below-to" below-ref=".subject" below-offset="30">With git rebase -i command</p>
+
+    <div class="c1 commit-wider hcenter fix-pos below-to" below-ref=".subtitle" data-offset="30">
+        <div class="icon"><span class="octicon octicon-git-commit rotate-90"></span></div>
+        <div class="label"><label class="caption">c01: init</label></div>
+    </div>
+
+    <div class="c2 commit-wider hcenter fix-pos below-to" below-ref=".c1" data-offset="5">
+        <div class="icon"><span class="octicon octicon-git-commit rotate-90"></span></div>
+        <div class="label"><label class="caption">c02: add A</label></div>
+    </div>
+
+    <div class="c3 commit-wider hcenter fix-pos below-to" below-ref=".c2" data-offset="5" style="color:darkred;">
+        <div class="icon"><span class="octicon octicon-git-commit rotate-90" style="text-decoration: line-through;"></span></div>
+        <div class="label"><label class="caption" style="text-decoration: line-through;">c03: add B</label></div>
+    </div>
+
+    <div class="c4 commit-wider hcenter fix-pos below-to ahead-to" below-ref=".c3" data-offset="5" ahead-offset="-32" style="color:darkred;">
+        <div class="icon"><span class="octicon octicon-git-commit rotate-90"></span></div>
+        <div class="label"><label class="caption" style="">c04': add C & D</label></div>
+    </div>
+
+    <div class="c5 commit-wider hcenter fix-pos below-to after-to" below-ref=".c4" below-offset="0" after-offset="2" style="color:darkred;">
+        <div class="icon"><span class="octicon octicon-git-commit rotate-90" style="text-decoration: line-through;"></span></div>
+        <div class="label"><label class="caption" style="text-decoration: line-through;">c05: add D</label></div>
+    </div>
+
+    <div class="c6 commit-wider hcenter fix-pos below-to after-to" below-ref=".c5" below-offset="0" after-offset="-25">
+        <div class="icon"><span class="octicon octicon-git-commit rotate-90"></span></div>
+        <div class="label"><label class="caption">c06: add <span style="color:darkred;">E.txt</span></label></div>
+    </div>
+
+    <div class="branch-dev branch hcenter fix-pos below-to ahead-to" below-ref=".c6" ahead-ref=".c6" data-offset="5" ahead-offset="-95" style="width:60px;height:55px;color: #0b7495;">
+        <div><span class="octicon octicon-alignment-align rotate-45"></span></div>
+        <div style="height:30px;"><span class="octicon octicon-git-branch"></span></div>
+        <div style="height:25px;"><label class="caption" style="font-size: 0.65em">poc</label></div>
+    </div>
+
+    <div class="head-dev branch hcenter fix-pos below-to ahead-to" below-ref=".branch-dev" ahead-ref=".c5" ahead-offset="-95" data-offset="50" style="width:60px;height:55px;">
+        <div><span class="octicon octicon-alignment-align rotate-45" style="color: darkred;"></span></div>
+        <div style="height:30px;"><span class="octicon octicon-hubot" style="color: darkred;"></span></div>
+        <div style="height:25px;"><label class="caption" style="font-size: 0.65em;color: darkred;">HEAD</label></div>
+    </div>
+
+    <div class="hcenter fix-pos after-to below-to" after-ref=".c1" after-offset="60" below-ref=".c2" below-offset="-10">
+        <div class="bubble">
+            <p>Remove C03</p>
+        </div>
+    </div>
+
+    <div class="hcenter fix-pos after-to below-to" after-ref=".c1" after-offset="60" below-ref=".c3" below-offset="10">
+        <div class="bubble">
+            <p>Merge C04 & C05</p>
+        </div>
+    </div>
+
+    <div class="hcenter fix-pos after-to below-to" after-ref=".c1" after-offset="60" below-ref=".c5" below-offset="-10">
+        <div class="bubble">
+            <p>Modify C06</p>
+        </div>
+    </div>

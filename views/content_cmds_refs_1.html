@@ -1,0 +1,161 @@
+<h2 style="text-align:center;">Changing References</h2>
+
+    <div class="c1 commit hcenter fix-pos">
+        <div class="label"><label class="caption">c01</label></div>
+        <div class="icon"><span class="octicon octicon-git-commit rotate-90"></span></div>
+    </div>
+
+    <div class="c2 commit hcenter fix-pos below-to" below-ref=".c1" data-offset="5">
+        <div class="label"><label class="caption">c02</label></div>
+        <div class="icon"><span class="octicon octicon-git-commit rotate-90"></span></div>
+    </div>
+
+    <div class="c3 commit hcenter fix-pos below-to" below-ref=".c2" data-offset="5">
+        <div class="label"><label class="caption">c03</label></div>
+        <div class="icon"><span class="octicon octicon-git-commit rotate-90"></span></div>
+    </div>
+
+    <div class="c4 commit-revert hcenter fix-pos below-to ahead-to" below-ref=".c3" ahead-ref=".c3" data-offset="5" ahead-offset="-15">
+        <div class="icon"><span class="octicon octicon-git-commit rotate-n45"></span></div>
+        <div class="label"><label class="caption">c04</label></div>
+    </div>
+
+    <div class="c5 commit hcenter fix-pos below-to after-to" below-ref=".c3" after-ref=".c4" below-offset="2" after-offset="2">
+        <div class="label"><label class="caption">c05</label></div>
+        <div class="icon"><span class="octicon octicon-git-commit rotate-45"></span></div>
+    </div>
+
+    <div class="c6 commit-revert hcenter fix-pos below-to ahead-to" below-ref=".c4" ahead-ref=".c3" below-offset="0" ahead-offset="20">        
+        <div class="icon"><span class="octicon octicon-git-commit rotate-n45"></span></div>
+        <div class="label"><label class="caption">c06</label></div>
+    </div>
+
+    <div class="c7 commit hcenter fix-pos below-to after-to" below-ref=".c5" after-ref=".c5" below-offset="0" after-offset="-25">
+        <div class="label"><label class="caption">c07</label></div>
+        <div class="icon"><span class="octicon octicon-git-commit rotate-45"></span></div>
+    </div>    
+
+    <div class="c8 commit-revert hcenter fix-pos below-to after-to" below-ref=".c7" after-ref=".c3" data-offset="5" after-offset="-40">
+        <div class="icon"><span class="octicon octicon-git-commit rotate-n45"></span></div>
+        <div class="label"><label class="caption">c08</label></div>
+    </div>
+
+    <div class="c9 commit hcenter fix-pos below-to after-to" below-ref=".c7" after-ref=".c3" below-offset="0" after-offset="25">
+        <div class="label"><label class="caption">c09</label></div>
+        <div class="icon"><span class="octicon octicon-git-commit rotate-45"></span></div>
+    </div>
+
+    <div class="c10 commit-revert hcenter fix-pos below-to ahead-to" below-ref=".c6" ahead-ref=".c4" data-offset="0" ahead-offset="15">
+        <div class="label"><label class="caption">c10</label></div>
+        <div class="icon"><span class="octicon octicon-git-commit rotate-n45"></span></div>
+    </div>
+
+    <div class="c11 commit-revert hcenter fix-pos below-to after-to" below-ref=".c8" after-ref=".c6" data-offset="0" after-offset="10">
+        <div class="label"><label class="caption">c11</label></div>
+        <div class="icon"><span class="octicon octicon-git-commit rotate-n45"></span></div>
+    </div>
+
+    <div class="c12 commit hcenter fix-pos below-to after-to" below-ref=".c9" after-ref=".c7" data-offset="0" after-offset="5">
+        <div class="label"><label class="caption">c12</label></div>
+        <div class="icon"><span class="octicon octicon-git-commit rotate-45"></span></div>
+    </div>
+
+    <div class="c13 commit hcenter fix-pos below-to after-to" below-ref=".c12" after-ref=".c7" data-offset="0" after-offset="25">
+        <div class="label"><label class="caption">c13</label></div>
+        <div class="icon"><span class="octicon octicon-git-commit rotate-90"></span></div>
+    </div>
+
+    <div class="branch-idv branch hcenter fix-pos below-to after-to" below-ref=".c13" after-ref=".c7" after-offset="15" data-offset="5" style="width:60px;height:55px;color: #0b7495;">
+        <div><span class="octicon octicon-alignment-align rotate-45"></span></div>
+        <div style="height:30px;"><span class="octicon octicon-git-branch"></span></div>
+        <div style="height:25px;"><label class="caption" style="font-size: 0.65em">poc</label></div>
+    </div>
+
+    <div class="branch-dev branch hcenter fix-pos below-to after-to" below-ref=".c11" after-ref=".c6" after-offset="5" data-offset="0" style="width:60px;height:55px;color: #0b7495;">
+        <div><span class="octicon octicon-alignment-align rotate-45"></span></div>
+        <div style="height:30px;"><span class="octicon octicon-git-branch"></span></div>
+        <div style="height:25px;"><label class="caption" style="font-size: 0.65em">dev</label></div>        
+    </div>
+
+    <div class="branch-master branch hcenter fix-pos below-to ahead-to" below-ref=".c10" ahead-ref=".c4" data-offset="0" ahead-offset="15" style="width:60px;height:55px;color: #0b7495;">
+        <div><span class="octicon octicon-alignment-align rotate-45"></span></div>
+        <div style="height:30px;"><span class="octicon octicon-git-branch"></span></div>
+        <div style="height:25px;"><label class="caption" style="font-size: 0.65em">master</label></div>
+    </div>
+
+    <div class="tag branch hcenter fix-pos below-to after-to" below-ref=".c2" after-ref=".c3" below-offset="0" after-offset="20" style="color: darkblue;width:120px;">
+        <div style="float:left;"><span class="octicon octicon-alignment-align rotate-n45"></span></div>
+        <div style="float:right; margin-right:25px;margin-top:-15px;">
+        <div><label class="caption" style="font-size: 0.65em">pac-13.00</label></div>
+        <div><span class="octicon octicon-tag"></span></div>
+        </div>
+    </div>
+
+    <div class="head-master branch hcenter fix-pos below-to ahead-to" below-ref=".branch-master" ahead-ref=".c4" data-offset="50" ahead-offset="18" style="width:60px;height:55px;">
+        <div class="slide">
+            <div><span class="octicon octicon-alignment-align rotate-45" style="color: darkred;"></span></div>
+            <div style="height:30px;"><span class="octicon octicon-hubot" style="color: darkred;"></span></div>
+            <div style="height:25px;"><label class="caption" style="font-size: 0.65em;color: darkred;">HEAD</label></div>
+            <div class="slide bubble" style="float:left; margin-left:80px; margin-top:-60px;">
+                <p>git checkout dev</p>
+            </div>      
+        </div>
+    </div>
+
+    <div class="head-dev branch hcenter fix-pos below-to after-to" below-ref=".branch-dev" after-ref=".c6" after-offset="5" data-offset="50" style="width:60px;height:55px;">
+        <div class="slide">
+            <div><span class="octicon octicon-alignment-align rotate-45" style="color: darkred;"></span></div>
+            <div style="height:30px;"><span class="octicon octicon-hubot" style="color: darkred;"></span></div>
+            <div style="height:25px;"><label class="caption" style="font-size: 0.65em;color: darkred;">HEAD</label></div>
+            <div class="slide bubble" style="float:left; margin-left:80px; margin-top:-60px;">
+                <p>git checkout pac-13.00</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="head-dev branch hcenter fix-pos below-to after-to" below-ref=".c2" after-ref=".tag" after-offset="-15" data-offset="0" style="width:60px;height:55px;">
+        <div class="slide" style="width:75px;">
+            <div style="float:left;">
+                <div><span class="octicon octicon-alignment-align rotate-n45" style="color: darkred;"></span></div>
+            </div>
+            <div style="float:right;margin-left:30px;margin-top:-40px;">
+                <div style="height:30px;"><span class="octicon octicon-hubot" style="color: darkred;"></span></div>
+                <div style="height:25px;"><label class="caption" style="font-size: 0.65em;color: darkred;">HEAD</label></div>
+            </div>
+            <div class="slide bubble" style="float:left; margin-left:80px; margin-top:-60px;">
+                <p>git checkout c01</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="head-dev branch hcenter fix-pos after-to" after-ref=".c1" after-offset="20" data-offset="0" style="width:60px;height:55px;">
+        <div class="slide" style="width:75px;">
+            <div style="float:left;">
+                <div><span class="octicon octicon-alignment-align rotate-n45" style="color: darkred;"></span></div>
+            </div>
+            <div style="float:right;margin-left:30px;margin-top:-40px;">
+                <div style="height:30px;"><span class="octicon octicon-hubot" style="color: darkred;"></span></div>
+                <div style="height:25px;"><label class="caption" style="font-size: 0.65em;color: darkred;">HEAD</label></div>
+            </div>
+            <div class="slide bubble" style="float:left; margin-left:80px; margin-top:-60px; width:250px;">
+                <p>git branch -f poc pac-13.00</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide" style="width:100%;height:100%;position: absolute;top:0; left: 0;">
+        <div class="head-dev branch hcenter fix-pos below-to after-to" below-ref=".c2" after-ref=".tag" after-offset="-15" data-offset="0" style="width:60px;height:55px; color: #0b7495;">
+            <div style="float:left;">
+                <div><span class="octicon octicon-alignment-align rotate-n45"></span></div>
+            </div>
+            <div style="float:right;margin-left:30px;margin-top:-40px;">
+                <div style="height:30px;"><span class="octicon octicon-git-branch"></span></div>
+                <div style="height:25px;"><label class="caption" style="font-size: 0.65em">poc</label></div>
+            </div>
+        </div>
+        <div class="branch-idv branch hcenter fix-pos below-to after-to" below-ref=".c13" after-ref=".c7" after-offset="15" data-offset="5" style="width:60px;height:55px;color: lightgray;">
+            <div><span class="octicon octicon-alignment-align rotate-45"></span></div>
+            <div style="height:30px;"><span class="octicon octicon-git-branch"></span></div>
+            <div style="height:25px;"><label class="caption" style="font-size: 0.65em">poc</label></div>
+        </div>
+    </div>

@@ -1,0 +1,36 @@
+<h2 style="text-align:center;">Applying Changes</h2>
+
+    <h4 class="git-cm hcenter fix-pos arg below-to" below-ref=".subject" below-offset="80" style="text-align:center;">git commit</h2>
+
+    <div class="c1 hcenter fix-pos arg below-to" below-ref=".git-cm" below-offset="20">
+        <h5>-a</h5>
+        <label class="caption arg-desc">bypass staging; commit changes directly</label>
+    </div>  
+
+    <div class="c2 hcenter fix-pos below-to arg" below-ref=".c1" below-offset="0">
+        <h5>-p</h5>
+        <label class="caption arg-desc">patch mode; commit staged changes by hunks</label>
+    </div>
+
+    <div class="c3 hcenter fix-pos below-to arg" below-ref=".c2" below-offset="0">
+        <h5>--amend</h5>
+        <label class="caption arg-desc">redo latest commit with staged changes</label>
+    </div>
+
+    <h4 class="git-push fix-pos hcenter below-to" below-ref=".c3" below-offset="30" style="text-align:center;">git push</h2>
+
+    <div class="p1 hcenter fix-pos arg below-to" below-ref=".git-push" below-offset="20">
+        <h5>-u</h5>
+        <label class="caption arg-desc">push to remote and create upstream reference if nonexistent</label>
+    </div>
+
+    <div class="p2 hcenter fix-pos arg below-to" below-ref=".p1" below-offset="0">
+        <h5>--delete</h5>
+        <label class="caption arg-desc">remove remote branches</label>
+    </div>
+
+    <div class="hcenter fix-pos after-to below-to arg-cmt" below-ref=".p1" after-ref=".p2" below-offset="0">
+        <div class="bubble">
+            <p>git push --delete origin temp</p>
+        </div>
+    </div>
