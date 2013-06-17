@@ -288,7 +288,7 @@ label.caption {
 .bubble-r:after {
     content: "";
     float:right;
-    margin-right: -9px;
+    margin-right: -7px;
     margin-top: -25px;
     top: 18px;
     right: 0px;
