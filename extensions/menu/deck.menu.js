@@ -182,6 +182,8 @@ on the deck container.
 		if (container.hasClass($[deck]('getOptions').classes.menu)) {
 			container.scrollTop($[deck]('getSlide', to).offset().top);
 		}
+
+		$d.trigger('deck.changed', to);
 	});
 })(jQuery, 'deck');
 

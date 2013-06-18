@@ -303,7 +303,14 @@ that use the API provided by core.
 		prev: function() {
 			methods.go(current-1);
 		},
+		/*
+		jQuery.deck('getCurrent')
 		
+		Returns the index of curent slide.
+		*/
+		getCurrent: function() {
+			return current;
+		},
 		/*
 		jQuery.deck('getSlide', index)
 		
@@ -494,5 +501,7 @@ that use the API provided by core.
 				$this.attr('src', originalSrc);
 			}
 		});
+
+		$d.trigger('deck.changed', to);
 	});
 })(jQuery, 'deck', document);

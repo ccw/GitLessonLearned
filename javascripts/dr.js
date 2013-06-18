@@ -39,13 +39,23 @@ $(function() {
     var x = 0;
     for (var slideIndex = 0; slideIndex < slides.length; slideIndex++) {
         var slide = slides[slideIndex];
-        $('<section/>').attr('id', slide).addClass('slide').load(
-            'views/' + slide + '.html', function(response, status, xhr) {
-                if($('section.slide').length == slides.length) {
-                    prepareScreen();
-                }            
-        }).appendTo(".deck-container");
-    }    	
+        $.ajax({
+            type: 'GET',
+            url: 'views/' + slide + '.html',
+            dataType: 'text',
+            crossDomain: true,
+            isLocal: true,
+            success: function() {
+                console.log('s');
+            }
+        }).always(function(resp) {
+            $('<section/>').attr('id', slide).addClass('slide').html(resp.responseText).appendTo(".deck-container");
+            if ((++x) == slides.length) {
+                $('.slide').length;
+                prepareScreen();
+            }
+        });
+    }    
 });
 
 var positionTypes = [
@@ -67,7 +77,6 @@ function prepareDeck() {
     $.deck('.slide');    
 
     $('p.deck-status').on('click', function() {
-        alert('a');
         if ($('.goto-form').css('display') === 'none') {
             $.deck('showGoTo');
         } else {
@@ -75,7 +84,9 @@ function prepareDeck() {
         }
     });
 
-    //$(document).on("deck.change", positioning);
+    $(document).on("deck.changed", function(event, current){
+        positioning('section.slide:eq(' + current + ')');
+    });
     $(document).on("deck.init", positioning);
 }
 
@@ -91,21 +102,25 @@ function eventing() {
     });
 }
 
-function positioning() {
+function positioning(modifier) {
     var x = $(window).width() / 2;
     var y = $(window).height() / 2;
 
-    $(".hcenter").each(function() {
+    if (typeof modifier == 'undefined') {
+        modifier = "";
+    }
+
+    $(modifier + " .hcenter").each(function() {
         $(this).css('left', (x - $(this).width() / 2) + 'px');
     });
 
     for (var i = 0; i < positionTypes.length; i++) {
-        positioningForType(positionTypes[i]);
+        positioningForType(modifier, positionTypes[i]);
     }
 }
 
-function positioningForType(type) {
-    $('.' + type.name + '-to').each(function() {
+function positioningForType(modifier, type) {
+    $(modifier + ' .' + type.name + '-to').each(function() {
         var obj = $(this);        
         var ref = getRef(obj, type.name + '-ref', findWithinSameSection);
         if (ref) {
