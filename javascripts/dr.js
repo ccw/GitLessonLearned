@@ -106,7 +106,7 @@ function positioning(modifier) {
     var x = $(window).width() / 2;
     var y = $(window).height() / 2;
 
-    if (typeof modifier == 'undefined') {
+    if (typeof modifier !== 'string') {
         modifier = "";
     }
 
