@@ -44,10 +44,7 @@ $(function() {
             url: 'views/' + slide + '.html',
             dataType: 'text',
             crossDomain: true,
-            isLocal: true,
-            success: function() {
-                console.log('s');
-            }
+            isLocal: true
         }).always(function(resp) {
             $('<section/>').attr('id', slide).addClass('slide').html(resp.responseText).appendTo(".deck-container");
             if ((++x) == slides.length) {
@@ -154,7 +151,7 @@ function findWithinSameSection(obj, refName) {
 }
 
 function decoratesWithPosition(ref) {
-    if (!ref || !ref.position()) return ref;
+    if (!ref || !ref.position() || typeof ref == 'undefined') return ref;
     return {'left':   ref.position().left,
             'top':    ref.position().top,
             'right':  ref.position().left + ref.width(),
