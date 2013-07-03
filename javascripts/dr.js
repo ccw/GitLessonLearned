@@ -36,24 +36,32 @@ var slides = [
 ];
 
 $(function() {
-    var x = 0;
-    for (var slideIndex = 0; slideIndex < slides.length; slideIndex++) {
-        var slide = slides[slideIndex];
-        $.ajax({
-            type: 'GET',
-            url: 'views/' + slide + '.html',
-            dataType: 'text',
-            crossDomain: true,
-            isLocal: true
-        }).always(function(resp) {
-            $('<section/>').attr('id', slide).addClass('slide').html(resp.responseText).appendTo(".deck-container");
-            if ((++x) == slides.length) {
-                $('.slide').length;
-                prepareScreen();
-            }
-        });
-    }    
+    new Spinner({length:50, radius: 30, width: 15}).spin(document.getElementById('spinner'));
+
+    loadSlide(0);
 });
+
+function loadSlide(index) {
+    var slideName = slides[index];
+    $.ajax({
+        type: 'GET',
+        url: 'views/' + slideName + '.html',
+        dataType: 'text',
+        success: function(content) {
+            afterSlideLoaded(slideName, content, index);
+        }
+    });
+}
+
+function afterSlideLoaded(slideName, content, index) {
+    $('<section/>').attr('id', slideName).addClass('slide').hide().html(content).appendTo(".deck-container");
+    if (index < slides.length - 1) {
+        loadSlide(index + 1);
+    } else {
+        prepareScreen();
+        $('#spinner').remove();
+    }
+}
 
 var positionTypes = [
     {name: 'halign', positioning: function(obj, ref, offset) { obj.css('left', ref.left + 'px') } },
@@ -65,6 +73,8 @@ var positionTypes = [
 ];
 
 function prepareScreen() {
+    $('section.slide').show();
+
     prepareDeck();
 
     $(window).bind("resize", positioning);
@@ -151,11 +161,17 @@ function findWithinSameSection(obj, refName) {
 }
 
 function decoratesWithPosition(ref) {
-    if (!ref || !ref.position() || typeof ref == 'undefined') return ref;
-    return {'left':   ref.position().left,
-            'top':    ref.position().top,
-            'right':  ref.position().left + ref.width(),
-            'bottom': ref.position().top + ref.height(),
+    if (isNull(ref)) return ref;
+    var pos = ref.position();
+    if (isNull(pos)) return ref;
+    return {'left':   pos.left,
+            'top':    pos.top,
+            'right':  pos.left + ref.width(),
+            'bottom': pos.top + ref.height(),
             'height': ref.height(),
             'width':  ref.width()};
+}
+
+function isNull(ref) {
+    return !ref || (typeof ref == 'undefined');
 }
