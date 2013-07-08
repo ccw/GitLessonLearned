@@ -2,3 +2,6 @@
 .sass-cache/
 progress/
 server/
+*.iml
+*.iws
+*.ipr
