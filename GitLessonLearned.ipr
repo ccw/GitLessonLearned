@@ -382,10 +382,10 @@
   <component name="EclipseCodeFormatter">
     <option name="defaultSettings" value="true" />
     <option name="id" value="1345614000589" />
-    <option name="importOrderConfigFilePath" value="C:/Sources/mainline/modules/pacific-commerce/.settings/org.eclipse.jdt.core.prefs" />
+    <option name="importOrderConfigFilePath" value="$PROJECT_DIR$/../mainline/modules/pacific-commerce/.settings/org.eclipse.jdt.core.prefs" />
     <option name="importOrderFromFile" value="true" />
     <option name="name" value="default" />
-    <option name="pathToConfigFileJava" value="C:/Sources/mainline/modules/pacific-commerce/.settings/org.eclipse.jdt.core.prefs" />
+    <option name="pathToConfigFileJava" value="$PROJECT_DIR$/../mainline/modules/pacific-commerce/.settings/org.eclipse.jdt.core.prefs" />
   </component>
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" />
   <component name="InspectionProjectProfileManager">
