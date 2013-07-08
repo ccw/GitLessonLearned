@@ -83,30 +83,20 @@ function prepareScreen() {
 function prepareDeck() {
     $.deck('.slide');    
 
-    $('p.deck-status').on('click', function() {
-        if ($('.goto-form').css('display') === 'none') {
-            $.deck('showGoTo');
-        } else {
-            $.deck('hideGoTo');
-        }
-    });
+    $('p.deck-status').bind('click', toggleGoTo);
 
-    $(document).on("deck.changed", function(event, current){
+    $(document).bind("deck.changed", function(event, current) {
         positioning('section.slide:eq(' + current + ')');
     });
-    $(document).on("deck.init", positioning);
+    positioning();
 }
 
-function eventing() {
-    //noinspection JSCheckFunctionSignatures
-    $(document).on("deck.change", function(event, from, to) {
-        var obj = $.deck('getSlide', to);
-        if (obj.hasClass("event-show-n-hide")) {
-            var ref = getRef(obj, "event-ref", findWithinSameSection);
-            var refPost = decoratesWithPosition(ref);
-            obj.parent().append($('div').css('position', 'absolute'));
-        }
-    });
+function toggleGoTo() {
+    if ($('.goto-form').css('display') === 'none') {
+        $.deck('showGoTo');
+    } else {
+        $.deck('hideGoTo');
+    }
 }
 
 function positioning(modifier) {
