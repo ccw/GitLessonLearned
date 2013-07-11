@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<h2 class="subject" style="text-align:center;">Starting a Sprint</h2>
+<p class="subtitle fix-pos hcenter below-to" below-ref=".subject" below-offset="30">Working on individual branch</p>
+
+<div class="git-ipm branch hcenter fix-pos below-to" below-ref=".subtitle" data-offset="30">
+    <div><span class="octicon octicon-repo"></span></div>
+    <div><span class="octicon octicon-alignment-aligned-to rotate-45"></span></div>
+    <div><label class="caption" style="font-size: 0.65em">master</label></div>
+    <div><span class="octicon octicon-git-branch"></span></div>
+</div>
+
+<div class="cvs branch hcenter fix-pos ahead-to below-to" below-ref=".subtitle" below-offset="30" ahead-ref=".git-ipm" style="width:250px;">
+    <div style="line-height:0.5"><label class="caption" style="font-size: 0.65em">CVS<br/><span
+            style="font-size:0.75em;color:darkgray">mainline</span></label></div>
+    <div style="margin-left: 5px;"><span class="octicon octicon-git-branch"></span></div>
+</div>
+
+<div class="git-ipm-branch-dev branch hcenter fix-pos below-to" below-ref=".git-ipm" style="color: #0b7495;">
+    <div><span class="octicon octicon-alignment-aligned-to rotate-45"></span></div>
+    <div><label class="caption" style="font-size: 0.65em">dev</label></div>
+    <div><span class="octicon octicon-git-branch"></span></div>
+</div>
+
+<div class="git-ipm-branch-rtsai branch hcenter fix-pos below-to" below-ref=".git-ipm-branch-dev" style="color: darkgreen;">
+    <div><span class="octicon octicon-alignment-aligned-to rotate-45"></span></div>
+    <div><label class="caption" style="font-size: 0.65em">rtsai</label></div>
+    <div><span class="octicon octicon-git-branch"></span></div>
+</div>
+
+<div class="git-ipm-branch-kchen branch hcenter fix-pos below-to ahead-to" below-ref=".git-ipm-branch-dev" ahead-ref=".git-ipm-branch-rtsai"
+     style="color: darkgreen;">
+    <div><span class="octicon octicon-alignment-aligned-to rotate-90" style="margin-right: -25px"></span></div>
+    <div><label class="caption" style="font-size: 0.65em">kchen</label></div>
+    <div><span class="octicon octicon-git-branch"></span></div>
+</div>
+
+<div class="git-ipm-branch-shhuang branch hcenter fix-pos below-to after-to" below-ref=".git-ipm-branch-dev" after-ref=".git-ipm-branch-rtsai"
+     style="color: darkgreen;">
+    <div><span class="octicon octicon-alignment-aligned-to" style="margin-left: -25px"></span></div>
+    <div><label class="caption" style="font-size: 0.65em">shhuang</label></div>
+    <div><span class="octicon octicon-git-branch"></span></div>
+</div>
+
+<div class="hcenter fix-pos ahead-to below-to" below-ref=".git-ipm" ahead-ref=".git-ipm-branch-rtsai">
+    <div class="slide" style="text-align:center;width:70px;height:100px;">
+        <div>
+            <div style="line-height:2;vertical-align:top;"><label class="caption" style="font-size: 0.65em;color:darkred;">Merge</label></div>
+            <div style="margin-left: 5px;"><span class="octicon octicon-arrow-down arrow-45"></span></div>
+        </div>
+        <div style="float:right;margin-top:-45px;margin-right:80px;">
+            <div class="bubble-r" style="width:200px;height:100px;">
+                <p>Can be daily base as well<br/>if you like to</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="git-ipm-branch-poc hcenter fix-pos below-to after-to" below-ref=".git-ipm-branch-kchen" after-ref=".cvs" after-offset="-80" style="width: 300px;">
+    <div class="slide">
+        <div class="branch" style="color: darkblue;text-align: center;width:80px;">
+            <div><span class="octicon octicon-alignment-aligned-to rotate-45" style="margin-left: 0px"></span></div>
+            <div><label class="caption" style="font-size: 0.65em">br-poc</label></div>
+            <div><span class="octicon octicon-git-branch"></span></div>
+        </div>
+        <div style="float:right;margin-top:-75px;width:220px;">
+            <div class="bubble" style="width:220px;height:100px;">
+                <p style="margin-top:-10px;">If something jump out<br/>in the middle of current work</p>
+            </div>
+        </div>
+        <div style="float:left; margin-top: -180px; margin-left: -50px;">
+            <div style="line-height:2;vertical-align:top;"><label class="caption" style="font-size: 0.65em;color:darkred;">Branch</label></div>
+            <div style="margin-left: 5px;"><span class="octicon octicon-arrow-down arrow-v"></span></div>
+        </div>
+    </div>
+</div>

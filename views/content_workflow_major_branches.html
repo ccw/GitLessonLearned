@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<h2 class="subject" style="text-align:center;">Major Branches</h2>
+<p class="subtitle fix-pos hcenter below-to" below-ref=".subject" below-offset="30">
+    Branching by individual developer, because we're a very small team
+</p>
+
+<div class="git-ipm branch hcenter fix-pos below-to" below-ref=".subtitle" data-offset="30">
+    <div><span class="octicon octicon-repo"></span></div>
+    <div><span class="octicon octicon-alignment-aligned-to rotate-45"></span></div>
+    <div><label class="caption" style="font-size: 0.65em">master</label></div>
+    <div><span class="octicon octicon-git-branch"></span></div>
+</div>
+
+<div class="git-ipm-branch-dev branch hcenter fix-pos below-to" below-ref=".git-ipm" style="color: #0b7495;">
+    <div><span class="octicon octicon-alignment-aligned-to rotate-45"></span></div>
+    <div><label class="caption" style="font-size: 0.65em">dev</label></div>
+    <div><span class="octicon octicon-git-branch"></span></div>
+</div>
+
+<div class="git-ipm-branch-rtsai branch hcenter fix-pos below-to" below-ref=".git-ipm-branch-dev" style="color: darkgreen;">
+    <div><span class="octicon octicon-alignment-aligned-to rotate-45"></span></div>
+    <div><label class="caption" style="font-size: 0.65em">rtsai</label></div>
+    <div><span class="octicon octicon-git-branch"></span></div>
+</div>
+
+<div class="git-ipm-branch-kchen branch hcenter fix-pos below-to ahead-to" below-ref=".git-ipm-branch-dev" ahead-ref=".git-ipm-branch-rtsai"
+     style="color: darkgreen;">
+    <div><span class="octicon octicon-alignment-aligned-to rotate-90" style="margin-right: -25px"></span></div>
+    <div><label class="caption" style="font-size: 0.65em">kchen</label></div>
+    <div><span class="octicon octicon-git-branch"></span></div>
+</div>
+
+<div class="git-ipm-branch-shhuang branch hcenter fix-pos below-to after-to" below-ref=".git-ipm-branch-dev" after-ref=".git-ipm-branch-rtsai"
+     style="color: darkgreen;">
+    <div><span class="octicon octicon-alignment-aligned-to" style="margin-left: -25px"></span></div>
+    <div><label class="caption" style="font-size: 0.65em">shhuang</label></div>
+    <div><span class="octicon octicon-git-branch"></span></div>
+</div>
+
+<div class="hcenter fix-pos after-to below-to" below-ref=".git-ipm-branch-dev" after-ref=".git-ipm-branch-shhuang" style="margin-top: 50px;">
+    <div class="slide bubble">
+        <p>Individual works</p>
+    </div>
+</div>
+
+<div class="hcenter fix-pos after-to below-to" below-ref=".git-ipm" after-ref=".git-ipm-branch-dev" style="margin-top: 40px;">
+    <div class="slide bubble" style="height:90px">
+        <p>Project works<br/>Always testable, ideally</p>
+    </div>
+</div>
+
+<div class="hcenter fix-pos after-to" after-ref=".git-ipm" style="margin-top: 80px;">
+    <div class="slide bubble">
+        <p>For aligning CVS</p>
+    </div>
+</div>
